@@ -18,7 +18,7 @@ When argument y is a SpatVector, and list=FALSE, the first column has the ID (re
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.5-35</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-0</span>
       </span>
     </div>
 
@@ -55,49 +55,65 @@ When argument y is a SpatVector, and list=FALSE, the first column has the ID (re
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S4 method for SpatRaster,SpatVector</span>
-<span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, fun<span class="op">=</span><span class="cn">NULL</span>, method<span class="op">=</span><span class="st">"simple"</span>, list<span class="op">=</span><span class="cn">FALSE</span>, factors<span class="op">=</span><span class="cn">TRUE</span>, 
-        cells<span class="op">=</span><span class="cn">FALSE</span>, xy<span class="op">=</span><span class="cn">FALSE</span>, weights<span class="op">=</span><span class="cn">FALSE</span>, exact<span class="op">=</span><span class="cn">FALSE</span>,
-        touches<span class="op">=</span><span class="fu"><a href="geomtype.html">is.lines</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, layer<span class="op">=</span><span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatRaster,SpatExtent</span>
-<span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, factors<span class="op">=</span><span class="cn">TRUE</span>, cells<span class="op">=</span><span class="cn">FALSE</span>, xy<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatRaster,matrix</span>
-<span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatRaster,numeric</span>
-<span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for SpatRaster,SpatVector</span></span>
+<span><span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, fun<span class="op">=</span><span class="cn">NULL</span>, method<span class="op">=</span><span class="st">"simple"</span>, list<span class="op">=</span><span class="cn">FALSE</span>, factors<span class="op">=</span><span class="cn">TRUE</span>, </span>
+<span>        cells<span class="op">=</span><span class="cn">FALSE</span>, xy<span class="op">=</span><span class="cn">FALSE</span>, weights<span class="op">=</span><span class="cn">FALSE</span>, exact<span class="op">=</span><span class="cn">FALSE</span>,</span>
+<span>        touches<span class="op">=</span><span class="fu"><a href="geomtype.html">is.lines</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, layer<span class="op">=</span><span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatRaster,SpatExtent</span></span>
+<span><span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, factors<span class="op">=</span><span class="cn">TRUE</span>, cells<span class="op">=</span><span class="cn">FALSE</span>, xy<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatRaster,matrix</span></span>
+<span><span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatRaster,numeric</span></span>
+<span><span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatVector,SpatVector</span></span>
+<span><span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>x</dt>
-<dd><p>SpatRaster</p></dd>
+<dd><p>SpatRaster or SpatVector of polygons</p></dd>
+
 <dt>y</dt>
 <dd><p>SpatVector (for points, lines, polygons), or for points, 2-column matrix or data.frame (x, y) or (lon, lat), or a vector with cell numbers</p></dd>
+
 <dt>fun</dt>
 <dd><p>function to summarize the data by geometry. If <code>weights=TRUE</code> or <code>exact=TRUE</code> only <code>mean</code>, <code>sum</code>, <code>min</code> and <code>max</code> are accepted)</p></dd>
+
 <dt>...</dt>
 <dd><p>additional arguments to <code>fun</code> if <code>y</code> is a SpatVector. For example <code>na.rm=TRUE</code>. Or arguments passed to the <code>SpatRaster,SpatVector</code> method if <code>y</code> is a matrix (such as the <code>method</code> and <code>cells</code> arguments)</p></dd>
+
 <dt>method</dt>
 <dd><p>character. method for extracting values with points ("simple" or "bilinear"). With "simple" values for the cell a point falls in are returned. With "bilinear" the returned values are interpolated from the values of the four nearest raster cells</p></dd>
+
 <dt>list</dt>
 <dd><p>logical. If <code>FALSE</code> the output is simplified to a <code>matrix</code> (if <code>fun=NULL</code>)</p></dd>
+
 <dt>factors</dt>
 <dd><p>logical. If <code>TRUE</code> the categories are returned as factors instead of their numerical representation. The value returned becomes a data.frame if it otherwise would have been a matrix, even if there are no factors</p></dd>
+
 <dt>cells</dt>
 <dd><p>logical. If <code>TRUE</code> the cell numbers are also returned, unless <code>fun</code> is not <code>NULL</code>. Also see <code><a href="cells.html">cells</a></code></p></dd>
+
 <dt>xy</dt>
 <dd><p>logical. If <code>TRUE</code> the coordinates of the cells are also returned, unless <code>fun</code> is not <code>NULL</code>. Also see <code><a href="xyCellFrom.html">xyFromCell</a></code></p></dd>
+
 <dt>weights</dt>
 <dd><p>logical. If <code>TRUE</code> and <code>y</code> has polygons, the approximate fraction of each cell that is covered is returned as well, for example to compute a weighted mean</p></dd>
+
 <dt>exact</dt>
 <dd><p>logical. If <code>TRUE</code> and <code>y</code> has polygons, the exact fraction of each cell that is covered is returned as well, for example to compute a weighted mean</p></dd>
+
 <dt>touches</dt>
 <dd><p>logical. If <code>TRUE</code>, values for all cells touched by lines or polygons are extracted, not just those on the line render path, or whose center point is within the polygon. Not relevant for points; and always considered <code>TRUE</code> when <code>weights=TRUE</code> or <code>exact=TRUE</code></p></dd>
+
 <dt>layer</dt>
 <dd><p>character or numeric to select the layer to extract from for each geometry. If <code>layer</code> is a character it can be a name in <code>y</code> or a vector of layer names. If it is numeric, it must be integer values between <code>1</code> and <code>nlyr(x)</code></p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
@@ -110,39 +126,39 @@ When argument y is a SpatVector, and list=FALSE, the first column has the ID (re
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span>ncols<span class="op">=</span><span class="fl">5</span>, nrows<span class="op">=</span><span class="fl">5</span>, xmin<span class="op">=</span><span class="fl">0</span>, xmax<span class="op">=</span><span class="fl">5</span>, ymin<span class="op">=</span><span class="fl">0</span>, ymax<span class="op">=</span><span class="fl">5</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="values.html">values</a></span><span class="op">(</span><span class="va">r</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">25</span></span>
-<span class="r-in"><span class="va">xy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>,<span class="fl">0.5</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">2.5</span>,<span class="fl">2.5</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="va">xy</span>, crs<span class="op">=</span><span class="st">"+proj=longlat +datum=WGS84"</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">extract</span><span class="op">(</span><span class="va">r</span>, <span class="va">xy</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span>ncols<span class="op">=</span><span class="fl">5</span>, nrows<span class="op">=</span><span class="fl">5</span>, xmin<span class="op">=</span><span class="fl">0</span>, xmax<span class="op">=</span><span class="fl">5</span>, ymin<span class="op">=</span><span class="fl">0</span>, ymax<span class="op">=</span><span class="fl">5</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="values.html">values</a></span><span class="op">(</span><span class="va">r</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">25</span></span></span>
+<span class="r-in"><span><span class="va">xy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>,<span class="fl">0.5</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">2.5</span>,<span class="fl">2.5</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="va">xy</span>, crs<span class="op">=</span><span class="st">"+proj=longlat +datum=WGS84"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">extract</span><span class="op">(</span><span class="va">r</span>, <span class="va">xy</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1    21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2    13</span>
-<span class="r-in"><span class="fu">extract</span><span class="op">(</span><span class="va">r</span>, <span class="va">p</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">extract</span><span class="op">(</span><span class="va">r</span>, <span class="va">p</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ID lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  1    21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  2    13</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">r</span><span class="op">[</span><span class="fl">1</span>,<span class="op">]</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">r</span><span class="op">[</span><span class="fl">1</span>,<span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2     2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3     3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4     4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5     5</span>
-<span class="r-in"><span class="va">r</span><span class="op">[</span><span class="fl">5</span><span class="op">]</span></span>
+<span class="r-in"><span><span class="va">r</span><span class="op">[</span><span class="fl">5</span><span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     5</span>
-<span class="r-in"><span class="va">r</span><span class="op">[</span>,<span class="fl">5</span><span class="op">]</span></span>
+<span class="r-in"><span><span class="va">r</span><span class="op">[</span>,<span class="fl">5</span><span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2    10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3    15</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4    20</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5    25</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">r</span><span class="op">[</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">2</span>, <span class="fl">99</span><span class="op">:</span><span class="fl">101</span><span class="op">)</span><span class="op">]</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">r</span><span class="op">[</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">2</span>, <span class="fl">99</span><span class="op">:</span><span class="fl">101</span><span class="op">)</span><span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1    NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2     1</span>
@@ -150,74 +166,74 @@ When argument y is a SpatVector, and list=FALSE, the first column has the ID (re
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4    NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5    NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6    NA</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/meuse.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">xy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fl">179000</span>, <span class="fl">330000</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">xy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">xy</span><span class="op">-</span><span class="fl">100</span>, <span class="va">xy</span>, <span class="va">xy</span><span class="op">+</span><span class="fl">1000</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">extract</span><span class="op">(</span><span class="va">r</span>, <span class="va">xy</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/meuse.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">xy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fl">179000</span>, <span class="fl">330000</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">xy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">xy</span><span class="op">-</span><span class="fl">100</span>, <span class="va">xy</span>, <span class="va">xy</span><span class="op">+</span><span class="fl">1000</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">extract</span><span class="op">(</span><span class="va">r</span>, <span class="va">xy</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  378</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  251</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3  208</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="va">xy</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="geometry.html">geom</a></span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">g</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="va">xy</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="geometry.html">geom</a></span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">g</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      geom part      x      y hole</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    1 178900 329900    0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2    1 179000 330000    0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3    1 180000 331000    0</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">extract</span><span class="op">(</span><span class="va">r</span>, <span class="va">p</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">extract</span><span class="op">(</span><span class="va">r</span>, <span class="va">p</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ID test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  1  378</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  2  251</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3  3  208</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">r</span> <span class="op">+</span> <span class="fl">10</span></span>
-<span class="r-in"><span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">p</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">r</span> <span class="op">+</span> <span class="fl">10</span></span></span>
+<span class="r-in"><span><span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">p</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ID test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  1  388</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  2  261</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3  3  218</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">i</span> <span class="op">&lt;-</span> <span class="fu"><a href="xyCellFrom.html">cellFromXY</a></span><span class="op">(</span><span class="va">r</span>, <span class="va">xy</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">x</span><span class="op">[</span><span class="va">i</span><span class="op">]</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">i</span> <span class="op">&lt;-</span> <span class="fu"><a href="xyCellFrom.html">cellFromXY</a></span><span class="op">(</span><span class="va">r</span>, <span class="va">xy</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">x</span><span class="op">[</span><span class="va">i</span><span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  388</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  261</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3  218</span>
-<span class="r-in"><span class="va">r</span><span class="op">[</span><span class="va">i</span><span class="op">]</span></span>
+<span class="r-in"><span><span class="va">r</span><span class="op">[</span><span class="va">i</span><span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  378</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  251</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3  208</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">x</span><span class="op">*</span><span class="fl">2</span>,<span class="va">x</span><span class="op">*</span><span class="fl">3</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">y</span><span class="op">[</span><span class="va">i</span><span class="op">]</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">x</span><span class="op">*</span><span class="fl">2</span>,<span class="va">x</span><span class="op">*</span><span class="fl">3</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">y</span><span class="op">[</span><span class="va">i</span><span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   test test.1 test.2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  388    776   1164</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  261    522    783</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3  218    436    654</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">## extract with a polygon</span></span>
-<span class="r-in"><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/lux.shp"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">v</span> <span class="op">&lt;-</span> <span class="va">v</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span>,<span class="op">]</span></span>
-<span class="r-in"><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="va">v</span>, resolution<span class="op">=</span><span class="fl">.1</span>, names<span class="op">=</span><span class="st">"test"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="values.html">values</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="dimensions.html">ncell</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">rf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/elev.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="va">rf</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">v</span>, <span class="va">mean</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## extract with a polygon</span></span></span>
+<span class="r-in"><span><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/lux.shp"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">v</span> <span class="op">&lt;-</span> <span class="va">v</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span>,<span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="va">v</span>, resolution<span class="op">=</span><span class="fl">.1</span>, names<span class="op">=</span><span class="st">"test"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="values.html">values</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="dimensions.html">ncell</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">rf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/elev.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="va">rf</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">v</span>, <span class="va">mean</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ID elevation</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  1  467.1052</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  2  333.8629</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu">extract</span><span class="op">(</span><span class="va">z</span>, <span class="va">v</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">e</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu">extract</span><span class="op">(</span><span class="va">z</span>, <span class="va">v</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">e</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ID test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  1    2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  1    3</span>
@@ -228,26 +244,26 @@ When argument y is a SpatVector, and list=FALSE, the first column has the ID (re
 <span class="r-out co"><span class="r-pr">#&gt;</span> 7  2   17</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 8  2   18</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 9  2   19</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/tapply.html" class="external-link">tapply</a></span><span class="op">(</span><span class="va">e</span><span class="op">[</span>,<span class="fl">2</span><span class="op">]</span>, <span class="va">e</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span>, <span class="va">mean</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/tapply.html" class="external-link">tapply</a></span><span class="op">(</span><span class="va">e</span><span class="op">[</span>,<span class="fl">2</span><span class="op">]</span>, <span class="va">e</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span>, <span class="va">mean</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     1     2 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  5.20 16.75 </span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">ee</span> <span class="op">&lt;-</span> <span class="fu">extract</span><span class="op">(</span><span class="va">z</span>, <span class="va">v</span>, list<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/rapply.html" class="external-link">rapply</a></span><span class="op">(</span><span class="va">ee</span>, <span class="va">mean</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">ee</span> <span class="op">&lt;-</span> <span class="fu">extract</span><span class="op">(</span><span class="va">z</span>, <span class="va">v</span>, list<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/rapply.html" class="external-link">rapply</a></span><span class="op">(</span><span class="va">ee</span>, <span class="va">mean</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1]  5.20 16.75</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="va">z</span>, <span class="va">z</span><span class="op">*</span><span class="fl">2</span>, <span class="va">z</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="names.html">names</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">v</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">de</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">e</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="aggregate.html">aggregate</a></span><span class="op">(</span><span class="va">de</span><span class="op">[</span>,<span class="fl">2</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span>, <span class="va">de</span><span class="op">[</span>,<span class="fl">1</span>,drop<span class="op">=</span><span class="cn">FALSE</span><span class="op">]</span>, <span class="va">mean</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="va">z</span>, <span class="va">z</span><span class="op">*</span><span class="fl">2</span>, <span class="va">z</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="names.html">names</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">v</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">de</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">e</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="aggregate.html">aggregate</a></span><span class="op">(</span><span class="va">de</span><span class="op">[</span>,<span class="fl">2</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span>, <span class="va">de</span><span class="op">[</span>,<span class="fl">1</span>,drop<span class="op">=</span><span class="cn">FALSE</span><span class="op">]</span>, <span class="va">mean</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   ID     a    b        c</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  1  5.20 10.4 1.733333</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2  2 16.75 33.5 5.583333</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">ee</span> <span class="op">&lt;-</span> <span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">v</span>, list<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rapply.html" class="external-link">rapply</a></span><span class="op">(</span><span class="va">ee</span>, <span class="va">mean</span><span class="op">)</span>, ncol<span class="op">=</span><span class="fu"><a href="dimensions.html">nlyr</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, byrow<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">ee</span> <span class="op">&lt;-</span> <span class="fu">extract</span><span class="op">(</span><span class="va">x</span>, <span class="va">v</span>, list<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rapply.html" class="external-link">rapply</a></span><span class="op">(</span><span class="va">ee</span>, <span class="va">mean</span><span class="op">)</span>, ncol<span class="op">=</span><span class="fu"><a href="dimensions.html">nlyr</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, byrow<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       [,1] [,2]     [,3]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  5.20 10.4 1.733333</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,] 16.75 33.5 5.583333</span>
@@ -265,7 +281,7 @@ When argument y is a SpatVector, and list=FALSE, the first column has the ID (re
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer></div>

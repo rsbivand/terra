@@ -130,10 +130,16 @@
     <loc>/reference/colors.html</loc>
   </url>
   <url>
+    <loc>/reference/combineGeoms.html</loc>
+  </url>
+  <url>
     <loc>/reference/compare-generics.html</loc>
   </url>
   <url>
     <loc>/reference/compareGeom.html</loc>
+  </url>
+  <url>
+    <loc>/reference/concats.html</loc>
   </url>
   <url>
     <loc>/reference/contour.html</loc>
@@ -490,6 +496,9 @@
     <loc>/reference/simplify.html</loc>
   </url>
   <url>
+    <loc>/reference/sort.html</loc>
+  </url>
+  <url>
     <loc>/reference/sources.html</loc>
   </url>
   <url>
@@ -503,9 +512,6 @@
   </url>
   <url>
     <loc>/reference/stretch.html</loc>
-  </url>
-  <url>
-    <loc>/reference/subset-vector.html</loc>
   </url>
   <url>
     <loc>/reference/subset.html</loc>

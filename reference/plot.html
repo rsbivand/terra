@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.5-35</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-0</span>
       </span>
     </div>
 
@@ -53,90 +53,121 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S4 method for SpatRaster,numeric</span>
-<span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, y<span class="op">=</span><span class="fl">1</span>, <span class="va">col</span>, <span class="va">type</span>, mar<span class="op">=</span><span class="cn">NULL</span>, legend<span class="op">=</span><span class="cn">TRUE</span>, axes<span class="op">=</span><span class="cn">TRUE</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, 
-    pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, maxcell<span class="op">=</span><span class="fl">500000</span>, smooth<span class="op">=</span><span class="cn">FALSE</span>, range<span class="op">=</span><span class="cn">NULL</span>, levels<span class="op">=</span><span class="cn">NULL</span>, 
-    fun<span class="op">=</span><span class="cn">NULL</span>, colNA<span class="op">=</span><span class="cn">NULL</span>, alpha<span class="op">=</span><span class="cn">NULL</span>, sort<span class="op">=</span><span class="cn">FALSE</span>, grid<span class="op">=</span><span class="cn">FALSE</span>, ext<span class="op">=</span><span class="cn">NULL</span>, reset<span class="op">=</span><span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatRaster,missing</span>
-<span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, maxcell<span class="op">=</span><span class="fl">500000</span>, <span class="va">main</span>, mar<span class="op">=</span><span class="cn">NULL</span>, <span class="va">nc</span>, <span class="va">nr</span>, maxnl<span class="op">=</span><span class="fl">16</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatRaster,character</span>
-<span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatVector,character</span>
-<span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">col</span>, <span class="va">type</span>, mar<span class="op">=</span><span class="cn">NULL</span>, legend<span class="op">=</span><span class="cn">TRUE</span>, add<span class="op">=</span><span class="cn">FALSE</span>, axes<span class="op">=</span><span class="op">!</span><span class="va">add</span>, 
-    main<span class="op">=</span><span class="va">y</span>, buffer<span class="op">=</span><span class="cn">TRUE</span>, background<span class="op">=</span><span class="cn">NULL</span>, grid<span class="op">=</span><span class="cn">FALSE</span>, ext<span class="op">=</span><span class="cn">NULL</span>, 
-    plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">nr</span>, <span class="va">nc</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatVector,numeric</span>
-<span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatVector,missing</span>
-<span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatExtent,missing</span>
-<span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for SpatRaster,numeric</span></span>
+<span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, y<span class="op">=</span><span class="fl">1</span>, <span class="va">col</span>, <span class="va">type</span>, mar<span class="op">=</span><span class="cn">NULL</span>, legend<span class="op">=</span><span class="cn">TRUE</span>, axes<span class="op">=</span><span class="cn">TRUE</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, </span>
+<span>    maxcell<span class="op">=</span><span class="fl">500000</span>, smooth<span class="op">=</span><span class="cn">FALSE</span>, range<span class="op">=</span><span class="cn">NULL</span>, levels<span class="op">=</span><span class="cn">NULL</span>, fun<span class="op">=</span><span class="cn">NULL</span>, colNA<span class="op">=</span><span class="cn">NULL</span>,</span>
+<span>  alpha<span class="op">=</span><span class="cn">NULL</span>, sort<span class="op">=</span><span class="cn">FALSE</span>, decreasing<span class="op">=</span><span class="cn">FALSE</span>, grid<span class="op">=</span><span class="cn">FALSE</span>, ext<span class="op">=</span><span class="cn">NULL</span>, reset<span class="op">=</span><span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatRaster,missing</span></span>
+<span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, maxcell<span class="op">=</span><span class="fl">500000</span>, <span class="va">main</span>, mar<span class="op">=</span><span class="cn">NULL</span>, <span class="va">nc</span>, <span class="va">nr</span>, maxnl<span class="op">=</span><span class="fl">16</span>, legend<span class="op">=</span><span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatRaster,character</span></span>
+<span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatVector,character</span></span>
+<span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">col</span>, <span class="va">type</span>, mar<span class="op">=</span><span class="cn">NULL</span>, legend<span class="op">=</span><span class="cn">TRUE</span>, add<span class="op">=</span><span class="cn">FALSE</span>, axes<span class="op">=</span><span class="op">!</span><span class="va">add</span>, </span>
+<span>    main<span class="op">=</span><span class="va">y</span>, buffer<span class="op">=</span><span class="cn">TRUE</span>, background<span class="op">=</span><span class="cn">NULL</span>, grid<span class="op">=</span><span class="cn">FALSE</span>, ext<span class="op">=</span><span class="cn">NULL</span>, </span>
+<span>    sort<span class="op">=</span><span class="cn">TRUE</span>, decreasing<span class="op">=</span><span class="cn">FALSE</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">nr</span>, <span class="va">nc</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatVector,numeric</span></span>
+<span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatVector,missing</span></span>
+<span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatExtent,missing</span></span>
+<span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>x</dt>
 <dd><p>SpatRaster or SpatVector</p></dd>
-<dt>y</dt>
+
+  <dt>y</dt>
 <dd><p>missing or positive integer or name indicating the layer(s) to be plotted</p></dd>
-<dt>col</dt>
-<dd><p>character. Colors. The default is <code>rev(grDevices::terrain.colors(50))</code></p></dd>
-<dt>type</dt>
-<dd><p>character. Type of map/legend. One of "continuous", "classes", or "interval"</p></dd>
-<dt>mar</dt>
-<dd><p>numeric vector of lenght 4 to set the margins of the plot (to make space for the legend). The default is (3.1, 3.1, 2.1, 7.1) for a single plot with a legend and (3.1, 3.1, 2.1, 2.1) otherwise. Use <code>mar=NA</code> to not set the margins</p></dd>
-<dt>legend</dt>
+
+  <dt>col</dt>
+<dd><p>character. Colors. The default is <code>rev(grDevices::terrain.colors(50))</code>. If <code>x</code> is a <code>SpatRaster</code>, it can also be a <code>data.frame</code> with two columns (value, color) to get a "classes" type legend or with three columns (from, to, color) to get an "interval" type legend</p></dd>
+
+  <dt>type</dt>
+<dd><p>character. Type of map/legend. One of "continuous", "classes", or "interval". If not specified, the type is chosen based on the data</p></dd>
+
+  <dt>mar</dt>
+<dd><p>numeric vector of length 4 to set the margins of the plot (to make space for the legend). The default is (3.1, 3.1, 2.1, 7.1) for a single plot with a legend and (3.1, 3.1, 2.1, 2.1) otherwise. Use <code>mar=NA</code> to not set the margins</p></dd>
+
+  <dt>legend</dt>
 <dd><p>logical or character. If not <code>FALSE</code> a legend is drawn. The character value can be used to indicate where the legend is to be draw. For example "topright" or "bottomleft". Use <code>plg</code> for more refined placement (SpatVector data only)</p></dd>
-<dt>axes</dt>
+
+  <dt>axes</dt>
 <dd><p>logical. Draw axes?</p></dd>
-<dt>buffer</dt>
+
+  <dt>buffer</dt>
 <dd><p>logical. If <code>TRUE</code> the plotting area is slightly larger than the extent of <code>x</code></p></dd>
-<dt>background</dt>
+
+  <dt>background</dt>
 <dd><p>background color. Default is no color (white)</p></dd>
-<dt>plg</dt>
+
+  <dt>plg</dt>
 <dd><p>list with parameters for drawing the legend. See the arguments for <code><a href="https://rdrr.io/r/graphics/legend.html" class="external-link">legend</a></code></p></dd>
-<dt>pax</dt>
+
+  <dt>pax</dt>
 <dd><p>list with parameters for drawing axes. See the arguments for <code><a href="https://rdrr.io/r/graphics/axis.html" class="external-link">axis</a></code></p></dd>
-<dt>maxcell</dt>
+  
+  <dt>maxcell</dt>
 <dd><p>positive integer. Maximum number of cells to use for the plot</p></dd>
-<dt>smooth</dt>
+
+  <dt>smooth</dt>
 <dd><p>logical. If <code>TRUE</code> the cell values are smoothed (for continuous legend)</p></dd>
-<dt>range</dt>
+
+  <dt>range</dt>
 <dd><p>numeric. minimum and maximum values to be used for the continuous legend</p></dd>
-<dt>levels</dt>
+
+  <dt>levels</dt>
 <dd><p>character. labels to be used for the classes legend</p></dd>
-<dt>fun</dt>
+
+  <dt>fun</dt>
 <dd><p>function to be called after plotting each SpatRaster layer to add something to each map (such as text, legend, lines). For example, with SpatVector <code>v</code>, you could do <code>fun=function() lines(v)</code>. The function may have one argument, representing the the layer that is plotted (1 to the number of layers)</p></dd>
-<dt>colNA</dt>
+  
+  <dt>colNA</dt>
 <dd><p>character. color for the NA values</p></dd>
-<dt>alpha</dt>
+
+  <dt>alpha</dt>
 <dd><p>Either a single numeric between 0 and 1 to set the transparency for all colors (0 is transparent, 1 is opaque) or a SpatRaster with values between 0 and 1 to set the transparency by cell. To set the transparency for a given color, set it to the colors directly</p></dd>
-<dt>sort</dt>
-<dd><p>logical. If <code>TRUE</code> legends with categorical values are sorted</p></dd>
-<dt>grid</dt>
+
+  <dt>sort</dt>
+<dd><p>logical. If <code>TRUE</code> legends with categorical values are sorted. If <code>x</code> is a <code>SpatVector</code> you can also supply a vector of the unique values, in the order in which you want them to appear in the legend</p></dd>
+
+  <dt>decreasing</dt>
+<dd><p>logical. If <code>TRUE</code>, legends are sorted in decreasing order</p></dd>
+
+  <dt>grid</dt>
 <dd><p>logical. If <code>TRUE</code> grid lines are drawn. Their properties such as type and color can be set with the <code>pax</code> argument</p></dd>
-<dt>nc</dt>
+
+  <dt>nc</dt>
 <dd><p>positive integer. Optional. The number of columns to divide the plotting device in (when plotting multiple layers)</p></dd>
-<dt>nr</dt>
+
+  <dt>nr</dt>
 <dd><p>positive integer. Optional. The number of rows to divide the plotting device in (when plotting multiple layers)</p></dd>
-<dt>main</dt>
+
+  <dt>main</dt>
 <dd><p>character. Main plot titles (one for each layer to be plotted)</p></dd>
-<dt>maxnl</dt>
+
+  <dt>maxnl</dt>
 <dd><p>positive integer. Maximum number of layers to plot (for a multi-layer object)</p></dd>
-<dt>add</dt>
+
+  <dt>add</dt>
 <dd><p>logical. If <code>TRUE</code> add the object to the current plot</p></dd>
-<dt>ext</dt>
+
+  <dt>ext</dt>
 <dd><p>SpatExtent. Can be use instead of xlim and ylim to set the extent of the plot</p></dd>
-<dt>reset</dt>
+
+  <dt>reset</dt>
 <dd><p>logical. If <code>TRUE</code> add the margins (see argument <code>mar</code>) are reset to what they were before calling plot; doing so may affect the display of additional objects that are added to the map (e.g. with  <code><a href="lines.html">lines</a></code></p></dd>
-<dt>...</dt>
+
+  <dt>...</dt>
 <dd><p>arguments passed to <code>plot("SpatRaster", "numeric")</code> and additional graphical arguments</p></dd>
+  
 </dl></div>
     <div id="see-also">
     <h2>See also</h2>
@@ -145,53 +176,53 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## raster</span></span>
-<span class="r-in"><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/elev.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span> </span>
-<span class="r-in"><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">r</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## raster</span></span></span>
+<span class="r-in"><span><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/elev.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span> </span></span>
+<span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">r</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">r</span>, type<span class="op">=</span><span class="st">"interval"</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">r</span>, type<span class="op">=</span><span class="st">"interval"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">6.3</span>, <span class="fl">6.35</span>, <span class="fl">49.9</span>, <span class="fl">50.1</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">r</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>ext<span class="op">=</span><span class="va">e</span>, title<span class="op">=</span><span class="st">"Title\n"</span>, title.cex<span class="op">=</span><span class="fl">1.25</span><span class="op">)</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">6.3</span>, <span class="fl">6.35</span>, <span class="fl">49.9</span>, <span class="fl">50.1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">r</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>ext<span class="op">=</span><span class="va">e</span>, title<span class="op">=</span><span class="st">"Title\n"</span>, title.cex<span class="op">=</span><span class="fl">1.25</span><span class="op">)</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot-3.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="classify.html">classify</a></span><span class="op">(</span><span class="va">r</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">100</span>,<span class="fl">200</span>,<span class="fl">300</span>,<span class="fl">400</span>,<span class="fl">500</span>,<span class="fl">600</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">d</span>, type<span class="op">=</span><span class="st">"classes"</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="classify.html">classify</a></span><span class="op">(</span><span class="va">r</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">100</span>,<span class="fl">200</span>,<span class="fl">300</span>,<span class="fl">400</span>,<span class="fl">500</span>,<span class="fl">600</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">d</span>, type<span class="op">=</span><span class="st">"classes"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot-4.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">d</span>, type<span class="op">=</span><span class="st">"interval"</span>, breaks<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span> </span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">d</span>, type<span class="op">=</span><span class="st">"interval"</span>, breaks<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span> </span></span>
 <span class="r-plt img"><img src="plot-5.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">d</span>, type<span class="op">=</span><span class="st">"interval"</span>, breaks<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">4</span>,<span class="fl">5</span><span class="op">)</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>legend<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"1-4"</span>, <span class="st">"4-5"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> </span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">d</span>, type<span class="op">=</span><span class="st">"interval"</span>, breaks<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">4</span>,<span class="fl">5</span><span class="op">)</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>legend<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"1-4"</span>, <span class="st">"4-5"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> </span></span>
 <span class="r-plt img"><img src="plot-6.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">d</span>, type<span class="op">=</span><span class="st">"classes"</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>legend<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"Mr"</span>, <span class="st">"Xx"</span>, <span class="st">"As"</span>, <span class="st">"Zx"</span>, <span class="st">"Bb"</span><span class="op">)</span>, x<span class="op">=</span><span class="st">"bottomright"</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">d</span>, type<span class="op">=</span><span class="st">"classes"</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>legend<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"Mr"</span>, <span class="st">"Xx"</span>, <span class="st">"As"</span>, <span class="st">"Zx"</span>, <span class="st">"Bb"</span><span class="op">)</span>, x<span class="op">=</span><span class="st">"bottomright"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot-7.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">trunc</a></span><span class="op">(</span><span class="va">r</span><span class="op">/</span><span class="fl">200</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="factors.html">levels</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"earth"</span>, <span class="st">"wind"</span>, <span class="st">"fire"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">"topright"</span><span class="op">)</span>,mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">trunc</a></span><span class="op">(</span><span class="va">r</span><span class="op">/</span><span class="fl">200</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="factors.html">levels</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>id<span class="op">=</span><span class="fl">0</span><span class="op">:</span><span class="fl">2</span>, element<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"earth"</span>, <span class="st">"wind"</span>, <span class="st">"fire"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">"topright"</span><span class="op">)</span>,mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="plot-8.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># two plots with the same legend</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html" class="external-link">dev.new</a></span><span class="op">(</span>width<span class="op">=</span><span class="fl">6</span>, height<span class="op">=</span><span class="fl">4</span>, noRStudioGD <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">r</span>, range<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">50</span>,<span class="fl">600</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">r</span><span class="op">/</span><span class="fl">2</span>, range<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">50</span>,<span class="fl">600</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># as you only need one legend:</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">r</span>, range<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">50</span>,<span class="fl">600</span><span class="op">)</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">3</span><span class="op">)</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>shrink<span class="op">=</span><span class="fl">0.9</span>, cex<span class="op">=</span><span class="fl">.8</span><span class="op">)</span>, </span>
-<span class="r-in">  pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span>, cex.axis<span class="op">=</span><span class="fl">.6</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="co">#text(182500, 335000, "Two maps, one plot", xpd=NA)</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">r</span><span class="op">/</span><span class="fl">2</span>, range<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">50</span>,<span class="fl">600</span><span class="op">)</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">2</span>, <span class="fl">4</span>, <span class="fl">4</span><span class="op">)</span>, legend<span class="op">=</span><span class="cn">FALSE</span>, </span>
-<span class="r-in">  pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">4</span><span class="op">)</span>, cex.axis<span class="op">=</span><span class="fl">.6</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">## multi-layer with RGB</span></span>
-<span class="r-in"><span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/logo.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span><span class="op">)</span>   </span>
-<span class="r-in"><span class="va">s</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># two plots with the same legend</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html" class="external-link">dev.new</a></span><span class="op">(</span>width<span class="op">=</span><span class="fl">6</span>, height<span class="op">=</span><span class="fl">4</span>, noRStudioGD <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">r</span>, range<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">50</span>,<span class="fl">600</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">r</span><span class="op">/</span><span class="fl">2</span>, range<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">50</span>,<span class="fl">600</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># as you only need one legend:</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">r</span>, range<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">50</span>,<span class="fl">600</span><span class="op">)</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">3</span><span class="op">)</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>shrink<span class="op">=</span><span class="fl">0.9</span>, cex<span class="op">=</span><span class="fl">.8</span><span class="op">)</span>, </span></span>
+<span class="r-in"><span>  pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span>, cex.axis<span class="op">=</span><span class="fl">.6</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">#text(182500, 335000, "Two maps, one plot", xpd=NA)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">r</span><span class="op">/</span><span class="fl">2</span>, range<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">50</span>,<span class="fl">600</span><span class="op">)</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">2</span>, <span class="fl">4</span>, <span class="fl">4</span><span class="op">)</span>, legend<span class="op">=</span><span class="cn">FALSE</span>, </span></span>
+<span class="r-in"><span>  pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">4</span><span class="op">)</span>, cex.axis<span class="op">=</span><span class="fl">.6</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># multi-layer with RGB</span></span></span>
+<span class="r-in"><span><span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/logo.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span><span class="op">)</span>   </span></span>
+<span class="r-in"><span><span class="va">s</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> class       : SpatRaster </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> dimensions  : 77, 101, 3  (nrow, ncol, nlyr)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> resolution  : 1, 1  (x, y)</span>
@@ -202,37 +233,47 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> names       : red, green, blue </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> min values  :   0,     0,    0 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> max values  : 255,   255,  255 </span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">s</span><span class="op">)</span></span>
-<span class="r-in"><span class="co"># remove RGB</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">s</span><span class="op">*</span><span class="fl">1</span><span class="op">)</span></span>
-<span class="r-in"><span class="co"># or use layers</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">s</span>, <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">s</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">## vector </span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/lux.shp"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">v</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="fl">2</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">6.2</span>, y<span class="op">=</span><span class="fl">50.2</span>, cex<span class="op">=</span><span class="fl">1.2</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="fl">4</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">6.2</span>, y<span class="op">=</span><span class="fl">50.2</span>, ncol<span class="op">=</span><span class="fl">2</span><span class="op">)</span>, main<span class="op">=</span><span class="st">""</span><span class="op">)</span></span>
-<span class="r-in"> </span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="fl">1</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">5.9</span>, y<span class="op">=</span><span class="fl">49.37</span>, horiz<span class="op">=</span><span class="cn">TRUE</span>, cex<span class="op">=</span><span class="fl">1.1</span><span class="op">)</span>, main<span class="op">=</span><span class="st">""</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">2</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, density<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, angle<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">18</span>, <span class="fl">360</span>, <span class="fl">20</span><span class="op">)</span>, col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="st">"NAME_2"</span>, col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, border<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"gray"</span>, <span class="st">"blue"</span><span class="op">)</span>, lwd<span class="op">=</span><span class="fl">3</span>, type<span class="op">=</span><span class="st">"classes"</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="st">"AREA"</span>, type<span class="op">=</span><span class="st">"interval"</span>, breaks<span class="op">=</span><span class="fl">3</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">3.1</span>, <span class="fl">3.1</span>, <span class="fl">2.1</span>, <span class="fl">3.1</span><span class="op">)</span>,</span>
-<span class="r-in">  plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">"topright"</span><span class="op">)</span>, main<span class="op">=</span><span class="st">""</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="st">"AREA"</span>, type<span class="op">=</span><span class="st">"interval"</span>, breaks<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">200</span>,<span class="fl">250</span>,<span class="fl">350</span><span class="op">)</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span>, </span>
-<span class="r-in">  plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>legend<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"&lt;200"</span>, <span class="st">"200-250"</span>, <span class="st">"&gt;250"</span><span class="op">)</span>, cex<span class="op">=</span><span class="fl">1</span>, </span>
-<span class="r-in">  bty<span class="op">=</span><span class="st">"o"</span>, x<span class="op">=</span><span class="fl">6.4</span>, y<span class="op">=</span><span class="fl">50.125</span>, box.lwd<span class="op">=</span><span class="fl">2</span>, bg<span class="op">=</span><span class="st">"light yellow"</span>, title<span class="op">=</span><span class="st">"My Legend"</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">s</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># remove RGB</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">s</span><span class="op">*</span><span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># or use layers</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">s</span>, <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">s</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># fix legend by linking values and colors</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span>nrows <span class="op">=</span> <span class="fl">2</span>, ncols <span class="op">=</span> <span class="fl">2</span>, vals<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">=</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span>nrows <span class="op">=</span> <span class="fl">2</span>, ncols <span class="op">=</span> <span class="fl">2</span>, vals<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cols</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>id<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span>, col<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"blue"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span><span class="op">)</span>, col<span class="op">=</span><span class="va">cols</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">r</span>  <span class="op">=</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span>nrows<span class="op">=</span><span class="fl">10</span>, ncols<span class="op">=</span><span class="fl">10</span>, vals<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">dr</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>from<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">33</span>,<span class="fl">66</span>,<span class="fl">150</span><span class="op">)</span>, to<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">33</span>, <span class="fl">66</span>, <span class="fl">95</span>,<span class="fl">200</span><span class="op">)</span>, col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow</a></span><span class="op">(</span><span class="fl">4</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">r</span>, col<span class="op">=</span><span class="va">dr</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">### SpatVector </span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/lux.shp"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">v</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="fl">2</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">6.2</span>, y<span class="op">=</span><span class="fl">50.2</span>, cex<span class="op">=</span><span class="fl">1.2</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="fl">4</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>sides<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">6.2</span>, y<span class="op">=</span><span class="fl">50.2</span>, ncol<span class="op">=</span><span class="fl">2</span><span class="op">)</span>, main<span class="op">=</span><span class="st">""</span><span class="op">)</span></span></span>
+<span class="r-in"><span> </span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="fl">1</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">5.9</span>, y<span class="op">=</span><span class="fl">49.37</span>, horiz<span class="op">=</span><span class="cn">TRUE</span>, cex<span class="op">=</span><span class="fl">1.1</span><span class="op">)</span>, main<span class="op">=</span><span class="st">""</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">2</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, density<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, angle<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">18</span>, <span class="fl">360</span>, <span class="fl">20</span><span class="op">)</span>, col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="st">"NAME_2"</span>, col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, border<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"gray"</span>, <span class="st">"blue"</span><span class="op">)</span>, lwd<span class="op">=</span><span class="fl">3</span>, type<span class="op">=</span><span class="st">"classes"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="st">"AREA"</span>, type<span class="op">=</span><span class="st">"interval"</span>, breaks<span class="op">=</span><span class="fl">3</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">3.1</span>, <span class="fl">3.1</span>, <span class="fl">2.1</span>, <span class="fl">3.1</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">"topright"</span><span class="op">)</span>, main<span class="op">=</span><span class="st">""</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">v</span>, <span class="st">"AREA"</span>, type<span class="op">=</span><span class="st">"interval"</span>, breaks<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">200</span>,<span class="fl">250</span>,<span class="fl">350</span><span class="op">)</span>, mar<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span>, </span></span>
+<span class="r-in"><span>  plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>legend<span class="op">=</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="st">"&lt;200"</span>, <span class="st">"200-250"</span>, <span class="st">"&gt;250"</span><span class="op">)</span>, cex<span class="op">=</span><span class="fl">1</span>, </span></span>
+<span class="r-in"><span>  bty<span class="op">=</span><span class="st">"o"</span>, x<span class="op">=</span><span class="fl">6.4</span>, y<span class="op">=</span><span class="fl">50.125</span>, box.lwd<span class="op">=</span><span class="fl">2</span>, bg<span class="op">=</span><span class="st">"light yellow"</span>, title<span class="op">=</span><span class="st">"My Legend"</span><span class="op">)</span><span class="op">)</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -247,7 +288,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer></div>

@@ -27,7 +27,7 @@ The distance is always expressed in meter, except when the coordinate reference 
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.5-35</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-0</span>
       </span>
     </div>
 
@@ -73,130 +73,146 @@ The distance is always expressed in meter, except when the coordinate reference 
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S4 method for SpatRaster,missing</span>
-<span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, grid<span class="op">=</span><span class="cn">FALSE</span>, filename<span class="op">=</span><span class="st">""</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatRaster,SpatVector</span>
-<span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, filename<span class="op">=</span><span class="st">""</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatVector,ANY</span>
-<span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, sequential<span class="op">=</span><span class="cn">FALSE</span>, pairs<span class="op">=</span><span class="cn">FALSE</span>, symmetrical<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>
-
-<span class="co"># S4 method for SpatVector,SpatVector</span>
-<span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, pairwise<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="co"># S4 method for matrix,matrix</span>
-<span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">lonlat</span>, pairwise<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="co"># S4 method for matrix,missing</span>
-<span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">lonlat</span>, sequential<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for SpatRaster,missing</span></span>
+<span><span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, grid<span class="op">=</span><span class="cn">FALSE</span>, filename<span class="op">=</span><span class="st">""</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatRaster,SpatVector</span></span>
+<span><span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, filename<span class="op">=</span><span class="st">""</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatVector,ANY</span></span>
+<span><span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, sequential<span class="op">=</span><span class="cn">FALSE</span>, pairs<span class="op">=</span><span class="cn">FALSE</span>, symmetrical<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatVector,SpatVector</span></span>
+<span><span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, pairwise<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for matrix,matrix</span></span>
+<span><span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">lonlat</span>, pairwise<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for matrix,missing</span></span>
+<span><span class="fu">distance</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">lonlat</span>, sequential<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>x</dt>
 <dd><p>SpatRaster, SpatVector, or two-column matrix with coordinates (x,y) or (lon,lat)</p></dd>
-<dt>y</dt>
+
+  <dt>y</dt>
 <dd><p>missing or SpatVector, or two-column matrix</p></dd>
-<dt>grid</dt>
+
+  <dt>grid</dt>
 <dd><p>logical. If <code>TRUE</code>, distance is computed using a path that goes through the centers of the 8 neighboring cells</p></dd>
-<dt>filename</dt>
+
+  <dt>filename</dt>
 <dd><p>character. Output filename</p></dd>
-<dt>...</dt>
+
+  <dt>...</dt>
 <dd><p>additional arguments for writing files as in <code><a href="writeRaster.html">writeRaster</a></code></p></dd>
-<dt>sequential</dt>
+
+  <dt>sequential</dt>
 <dd><p>logical. If <code>TRUE</code>, the distance between sequential geometries is returned</p></dd>
-<dt>pairwise</dt>
+
+  <dt>pairwise</dt>
 <dd><p>logical. If <code>TRUE</code> and if x and y have the same size (number of rows), the pairwise distances are returned instead of the distances between all elements</p></dd>
-<dt>lonlat</dt>
+ 
+  <dt>lonlat</dt>
 <dd><p>logical. If <code>TRUE</code> the coordinates are interpreted as angular (longitude/latitude). If <code>FALSE</code> they are interpreted as planar</p></dd>
-<dt>pairs</dt>
+
+  <dt>pairs</dt>
 <dd><p>logical. If <code>TRUE</code> a "from", "to", "distance" matrix is returned</p></dd>
-<dt>symmetrical</dt>
+ 
+  <dt>symmetrical</dt>
 <dd><p>logical. If <code>TRUE</code> and <code>pairs=TRUE</code>, the distance between a pair is only included once. The distance between geometry 1 and 3 is included, but the (same) distance between 3 and 1 is not</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>SpatRaster or numeric or matrix or distance matrix (object of class "dist")</p>
+    
+
+<p>SpatRaster or numeric or matrix or distance matrix (object of class "dist")</p>
     </div>
     <div id="note">
     <h2>Note</h2>
     <p>The distance unit is in meters.</p>
 <p>A distance matrix can be coerced into a matrix with <code>as.matrix</code></p>
     </div>
+    <div id="references">
+    <h2>References</h2>
+    <p>Karney, C.F.F., 2013. Algorithms for geodesics, J. Geodesy 87: 43-55. doi:10.1007/s00190-012-0578-z.</p>
+    </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">#lonlat</span></span>
-<span class="r-in"><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span>ncols<span class="op">=</span><span class="fl">36</span>, nrows<span class="op">=</span><span class="fl">18</span>, crs<span class="op">=</span><span class="st">"+proj=longlat +datum=WGS84"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">r</span><span class="op">[</span><span class="fl">500</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">1</span></span>
-<span class="r-in"><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">r</span><span class="op">)</span> </span>
-<span class="r-in"><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">d</span> <span class="op">/</span> <span class="fl">100000</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">#lonlat</span></span></span>
+<span class="r-in"><span><span class="va">r</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span>ncols<span class="op">=</span><span class="fl">36</span>, nrows<span class="op">=</span><span class="fl">18</span>, crs<span class="op">=</span><span class="st">"+proj=longlat +datum=WGS84"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">r</span><span class="op">[</span><span class="fl">500</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">1</span></span></span>
+<span class="r-in"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">r</span><span class="op">)</span> </span></span>
+<span class="r-in"><span><span class="fu"><a href="plot.html">plot</a></span><span class="op">(</span><span class="va">d</span> <span class="op">/</span> <span class="fl">100000</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="distance-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">#planar</span></span>
-<span class="r-in"><span class="va">rr</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span>ncols<span class="op">=</span><span class="fl">36</span>, nrows<span class="op">=</span><span class="fl">18</span>, crs<span class="op">=</span><span class="st">"+proj=utm +zone=1 +datum=WGS84"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">rr</span><span class="op">[</span><span class="fl">500</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">1</span></span>
-<span class="r-in"><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">rr</span><span class="op">)</span> </span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">90</span>,<span class="fl">30</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">90</span>,<span class="op">-</span><span class="fl">30</span><span class="op">)</span><span class="op">)</span>, crs<span class="op">=</span><span class="st">"+proj=longlat +datum=WGS84"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">dp</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">r</span>, <span class="va">p1</span><span class="op">)</span> </span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">p1</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">d</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#planar</span></span></span>
+<span class="r-in"><span><span class="va">rr</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span>ncols<span class="op">=</span><span class="fl">36</span>, nrows<span class="op">=</span><span class="fl">18</span>, crs<span class="op">=</span><span class="st">"+proj=utm +zone=1 +datum=WGS84"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">rr</span><span class="op">[</span><span class="fl">500</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">1</span></span></span>
+<span class="r-in"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">rr</span><span class="op">)</span> </span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">90</span>,<span class="fl">30</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">90</span>,<span class="op">-</span><span class="fl">30</span><span class="op">)</span><span class="op">)</span>, crs<span class="op">=</span><span class="st">"+proj=longlat +datum=WGS84"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">dp</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">r</span>, <span class="va">p1</span><span class="op">)</span> </span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">p1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">d</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          1        2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 10014577         </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 10014577 20003931</span>
-<span class="r-in"><span class="fu"><a href="coerce.html">as.matrix</a></span><span class="op">(</span><span class="va">d</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu"><a href="coerce.html">as.matrix</a></span><span class="op">(</span><span class="va">d</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          1        2        3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1        0 10014577 10014577</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 10014577        0 20003931</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 10014577 20003931        0</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">30</span>,<span class="op">-</span><span class="fl">30</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">25</span>,<span class="fl">40</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">9</span>,<span class="op">-</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span>, crs<span class="op">=</span><span class="st">"+proj=longlat +datum=WGS84"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">dd</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">p1</span>, <span class="va">p2</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">dd</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">30</span>,<span class="op">-</span><span class="fl">30</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">25</span>,<span class="fl">40</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">9</span>,<span class="op">-</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span>, crs<span class="op">=</span><span class="st">"+proj=longlat +datum=WGS84"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">dd</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">p1</span>, <span class="va">p2</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">dd</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          [,1]     [,2]     [,3]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  4596223  5104507  1054933</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  9192445  5905838 11048088</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,] 10825924 14117180  8981037</span>
-<span class="r-in"><span class="va">pd</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">p1</span>, <span class="va">p2</span>, pairwise<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">pd</span></span>
+<span class="r-in"><span><span class="va">pd</span> <span class="op">&lt;-</span> <span class="fu">distance</span><span class="op">(</span><span class="va">p1</span>, <span class="va">p2</span>, pairwise<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">pd</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 4596223 5905838 8981037</span>
-<span class="r-in"><span class="va">pd</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html" class="external-link">diag</a></span><span class="op">(</span><span class="va">dd</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="va">pd</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html" class="external-link">diag</a></span><span class="op">(</span><span class="va">dd</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE TRUE TRUE</span>
-<span class="r-in"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># polygons, lines</span></span>
-<span class="r-in"><span class="va">crs</span> <span class="op">&lt;-</span> <span class="st">"+proj=utm +zone=1"</span></span>
-<span class="r-in"><span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"POLYGON ((0 0, 8 0, 8 9, 0 9, 0 0))"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"POLYGON ((5 6, 15 6, 15 15, 5 15, 5 6))"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">p3</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"POLYGON ((2 12, 3 12, 3 13, 2 13, 2 12))"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">p1</span>, <span class="va">p2</span>, <span class="va">p3</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">L1</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"LINESTRING(1 11, 4 6, 10 6)"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">L2</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"LINESTRING(8 14, 12 10)"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">L3</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"LINESTRING(1 8, 12 14)"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">lns</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">L1</span>, <span class="va">L2</span>, <span class="va">L3</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">pts</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">7</span>,<span class="fl">10</span>,<span class="fl">10</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">3</span>,<span class="fl">5</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">distance</span><span class="op">(</span><span class="va">p1</span>,<span class="va">p3</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># polygons, lines</span></span></span>
+<span class="r-in"><span><span class="va">crs</span> <span class="op">&lt;-</span> <span class="st">"+proj=utm +zone=1"</span></span></span>
+<span class="r-in"><span><span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"POLYGON ((0 0, 8 0, 8 9, 0 9, 0 0))"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">p2</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"POLYGON ((5 6, 15 6, 15 15, 5 15, 5 6))"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">p3</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"POLYGON ((2 12, 3 12, 3 13, 2 13, 2 12))"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">p1</span>, <span class="va">p2</span>, <span class="va">p3</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">L1</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"LINESTRING(1 11, 4 6, 10 6)"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">L2</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"LINESTRING(8 14, 12 10)"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">L3</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="st">"LINESTRING(1 8, 12 14)"</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">lns</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">L1</span>, <span class="va">L2</span>, <span class="va">L3</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">pts</span> <span class="op">&lt;-</span> <span class="fu"><a href="vect.html">vect</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">7</span>,<span class="fl">10</span>,<span class="fl">10</span><span class="op">)</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">3</span>,<span class="fl">5</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span>, crs<span class="op">=</span><span class="va">crs</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">distance</span><span class="op">(</span><span class="va">p1</span>,<span class="va">p3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3</span>
-<span class="r-in"><span class="fu">distance</span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">distance</span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   1 2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 0  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 3 2</span>
-<span class="r-in"><span class="fu">distance</span><span class="op">(</span><span class="va">p</span>,<span class="va">pts</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">distance</span><span class="op">(</span><span class="va">p</span>,<span class="va">pts</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          [,1]     [,2]     [,3]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 0.000000 2.000000 2.000000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,] 3.000000 1.000000 0.000000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,] 9.848858 9.899495 9.219544</span>
-<span class="r-in"><span class="fu">distance</span><span class="op">(</span><span class="va">p</span>,<span class="va">lns</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">distance</span><span class="op">(</span><span class="va">p</span>,<span class="va">lns</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          [,1]     [,2]     [,3]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 0.000000 3.535534 0.000000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,] 0.000000 0.000000 0.000000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,] 1.414214 5.099020 2.553878</span>
-<span class="r-in"><span class="fu">distance</span><span class="op">(</span><span class="va">pts</span>,<span class="va">lns</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">distance</span><span class="op">(</span><span class="va">pts</span>,<span class="va">lns</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1]     [,2]     [,3]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    3 8.602325 7.262591</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    1 5.385165 6.943356</span>
@@ -215,7 +231,7 @@ The distance is always expressed in meter, except when the coordinate reference 
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer></div>

@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.5-35</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-0</span>
       </span>
     </div>
 
@@ -53,36 +53,45 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S4 method for character</span>
-<span class="fu">describe</span><span class="op">(</span><span class="va">x</span>, sds<span class="op">=</span><span class="cn">FALSE</span>, meta<span class="op">=</span><span class="cn">FALSE</span>, parse<span class="op">=</span><span class="cn">FALSE</span>, options<span class="op">=</span><span class="st">""</span>, print<span class="op">=</span><span class="cn">FALSE</span>, open_opt<span class="op">=</span><span class="st">""</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for character</span></span>
+<span><span class="fu">describe</span><span class="op">(</span><span class="va">x</span>, sds<span class="op">=</span><span class="cn">FALSE</span>, meta<span class="op">=</span><span class="cn">FALSE</span>, parse<span class="op">=</span><span class="cn">FALSE</span>, options<span class="op">=</span><span class="st">""</span>, print<span class="op">=</span><span class="cn">FALSE</span>, open_opt<span class="op">=</span><span class="st">""</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>x</dt>
 <dd><p>character. The name of a file with spatial data. Or a fully specified subdataset within a file such as <code>"NETCDF:\"AVHRR.nc\":NDVI"</code></p></dd>
-<dt>sds</dt>
+
+  <dt>sds</dt>
 <dd><p>logical. If <code>TRUE</code> the description or metadata of the subdatasets is returned (if available)</p></dd>
-<dt>meta</dt>
+
+  <dt>meta</dt>
 <dd><p>logical. Get the file level metadata instead</p></dd>
-<dt>parse</dt>
+
+  <dt>parse</dt>
 <dd><p>logical. If <code>TRUE</code>, metadata for subdatasets is parsed into components (if <code>meta=TRUE</code>)</p></dd>
-<dt>options</dt>
+
+  <dt>options</dt>
 <dd><p>character. A vector of valid options (if <code>meta=FALSE</code>) including "json", "mm", "stats", "hist", "nogcp", "nomd", "norat", "noct", "nofl", "checksum", "proj4", "listmdd", "mdd &lt;value&gt;" where &lt;value&gt; specifies a domain or 'all', "wkt_format &lt;value&gt;" where value is one of 'WKT1', 'WKT2', 'WKT2_2015', or 'WKT2_2018', "sd &lt;subdataset&gt;" where &lt;subdataset&gt; is the name or identifier of a sub-dataset. See <a href="https://gdal.org/programs/gdalinfo.html" class="external-link">https://gdal.org/programs/gdalinfo.html</a>. Ignored if <code>sds=TRUE</code></p></dd>
-<dt>print</dt>
+  
+  <dt>print</dt>
 <dd><p>logical. If <code>TRUE</code>, print the results</p></dd>
-<dt>open_opt</dt>
+
+  <dt>open_opt</dt>
 <dd><p>character. Driver specific open options</p></dd>
+   
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>character (invisibly, if <code>print=FALSE</code>)</p>
+    
+
+<p>character (invisibly, if <code>print=FALSE</code>)</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/elev.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">describe</span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/elev.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">describe</span><span class="op">(</span><span class="va">f</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "Driver: GTiff/GeoTIFF"                                                    </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [2] "Files: /Users/runner/work/_temp/Library/terra/ex/elev.tif"                </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [3] "Size is 95, 90"                                                           </span>
@@ -125,10 +134,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> [40] "    STATISTICS_MEAN=-9999"                                                </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [41] "    STATISTICS_MINIMUM=141"                                               </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [42] "    STATISTICS_STDDEV=-9999"                                              </span>
-<span class="r-in"><span class="fu">describe</span><span class="op">(</span><span class="va">f</span>, meta<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">describe</span><span class="op">(</span><span class="va">f</span>, meta<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "AREA_OR_POINT=Area"</span>
-<span class="r-in"><span class="co">#g &lt;- describe(f, options=c("json", "nomd", "proj4"))</span></span>
-<span class="r-in"><span class="co">#head(g)</span></span>
+<span class="r-in"><span><span class="co">#g &lt;- describe(f, options=c("json", "nomd", "proj4"))</span></span></span>
+<span class="r-in"><span><span class="co">#head(g)</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -143,7 +152,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer></div>

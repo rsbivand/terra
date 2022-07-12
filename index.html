@@ -40,7 +40,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.5-35</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-0</span>
       </span>
     </div>
 
@@ -86,20 +86,20 @@
 </h2>
 <p><code>terra</code> is available from CRAN, so you can use <code>install.packages("terra")</code> to get the current <em>released version</em>.</p>
 <p>The easiest way to use the <em>development version</em> on Windows or MacOS, is to install it from the <a href="https://r-universe.dev/organizations/" class="external-link">R-universe</a>, like this:</p>
-<pre><code><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'terra'</span>, repos<span class="op">=</span><span class="st">'https://rspatial.r-universe.dev'</span><span class="op">)</span></code></pre>
+<pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'terra'</span>, repos<span class="op">=</span><span class="st">'https://rspatial.r-universe.dev'</span><span class="op">)</span></span></code></pre>
 <div class="section level3">
 <h3 id="from-source-code">From source-code<a class="anchor" aria-label="anchor" href="#from-source-code"></a>
 </h3>
 <p>To install from source-code, first install the <a href="https://cran.r-project.org/web/packages/Rcpp/index.html" class="external-link">Rcpp</a> package that terra depends on:</p>
-<pre><code><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"Rcpp"</span><span class="op">)</span></code></pre>
+<pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"Rcpp"</span><span class="op">)</span></span></code></pre>
 <p>And then continue based on the OS you are using.</p>
 <div class="section level4">
 <h4 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a>
 </h4>
 <p>On Windows, you need to first install <a href="https://cran.r-project.org/bin/windows/Rtools/" class="external-link">Rtools</a> to get a C++ compiler that R can use.</p>
 <p>Then, in R, install the package.</p>
-<pre><code><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span><span class="st">"R_REMOTES_NO_ERRORS_FROM_WARNINGS"</span> <span class="op">=</span> <span class="st">"true"</span><span class="op">)</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span><span class="op">)</span></code></pre>
+<pre><code><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span><span class="st">"R_REMOTES_NO_ERRORS_FROM_WARNINGS"</span> <span class="op">=</span> <span class="st">"true"</span><span class="op">)</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="section level4">
 <h4 id="macos">MacOS<a class="anchor" aria-label="anchor" href="#macos"></a>
@@ -107,21 +107,22 @@
 <p>On OSX, first install gdal and proj with homebrew</p>
 <pre><code>brew install pkg-config
 brew install gdal</code></pre>
-<p>Followed by</p>
-<pre><code><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span><span class="st">"R_REMOTES_NO_ERRORS_FROM_WARNINGS"</span> <span class="op">=</span> <span class="st">"true"</span><span class="op">)</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span><span class="op">)</span></code></pre>
-<p>This should work on <strong>Catalina</strong> and <strong>Big Sur</strong></p>
+<p>Followed by (note the additional configuration argument needed for the current homebrew version of proj (7.0.0)</p>
+<pre><code><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span>, configure.args <span class="op">=</span> <span class="st">"--with-proj-lib=/usr/local/lib/"</span><span class="op">)</span></span></code></pre>
+<p>To install the CRAN version from source you would do</p>
+<pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span>, configure.args <span class="op">=</span> <span class="st">"--with-proj-lib=/usr/local/lib/"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="section level4">
 <h4 id="linux">Linux<a class="anchor" aria-label="anchor" href="#linux"></a>
 </h4>
-<p>C++11, GDAL (&gt;= 2.2.3), GEOS (&gt;= 3.4.0), PROJ (&gt;= 4.9.3), sqlite3 are required, but more recent versions highly recommended.</p>
+<p>The <em>easy</em> way to install terra on linux is with <a href="https://eddelbuettel.github.io/r2u/" class="external-link">r2u</a>.</p>
+<p>The harder way: C++11, GDAL (&gt;= 2.2.3), GEOS (&gt;= 3.4.0), PROJ (&gt;= 4.9.3), sqlite3 are required, but more recent versions highly recommended.</p>
 <p>To install these system requirements on Ubuntu you can do:</p>
 <pre><code>sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 sudo apt-get update
 sudo apt-get install libgdal-dev libgeos-dev libproj-dev </code></pre>
 <p>And now, in R, install the package</p>
-<pre><code><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span><span class="op">)</span></code></pre>
+<pre><code><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span><span class="op">)</span></span></code></pre>
 <p>See the <code>sf</code> <a href="https://github.com/r-spatial/sf" class="external-link">instructions</a> for installation on other linux systems — and for possible updates/improvements on the above instructions.</p>
 </div>
 </div>
@@ -182,7 +183,7 @@ sudo apt-get install libgdal-dev libgeos-dev libproj-dev </code></pre>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
       </footer>
