@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-11</span>
       </span>
     </div>
 
@@ -107,7 +107,7 @@
         </td>
         <td><p>Estimate values for cell values that are <code>NA</code> by interpolating between layers</p></td>
       </tr><tr><td>
-          <p><code><a href="arith-generic.html">Arith-methods</a></code> <code><a href="arith-generic.html">Arith,SpatExtent,numeric-method</a></code> <code><a href="arith-generic.html">Arith,numeric,SpatExtent-method</a></code> <code><a href="arith-generic.html">Arith,SpatExtent,SpatExtent-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatVector,SpatVector-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,missing-method</a></code> <code><a href="arith-generic.html">Arith,numeric,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,numeric-method</a></code> <code><a href="arith-generic.html">Arith,missing,SpatRaster-method</a></code> </p>
+          <p><code><a href="arith-generic.html">Arith-methods</a></code> <code><a href="arith-generic.html">Arith,SpatExtent,numeric-method</a></code> <code><a href="arith-generic.html">Arith,numeric,SpatExtent-method</a></code> <code><a href="arith-generic.html">Arith,SpatExtent,SpatExtent-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatVector,SpatVector-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,missing-method</a></code> <code><a href="arith-generic.html">Arith,numeric,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,numeric-method</a></code> <code><a href="arith-generic.html">Arith,logical,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,logical-method</a></code> <code><a href="arith-generic.html">Arith,missing,SpatRaster-method</a></code> </p>
         </td>
         <td><p>Arithmetic</p></td>
       </tr><tr><td>
@@ -323,7 +323,7 @@
         </td>
         <td><p>Extract values from a SpatRaster</p></td>
       </tr><tr><td>
-          <p><code><a href="factors.html">levels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">`levels&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">categories(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">is.factor(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">as.factor(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+          <p><code><a href="factors.html">levels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">`levels&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">categories(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">droplevels(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Categorical rasters</p></td>
       </tr><tr><td>
@@ -435,7 +435,7 @@
         </td>
         <td><p>Intersection</p></td>
       </tr><tr><td>
-          <p><code><a href="is.bool.html">is.bool(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.bool(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">is.int(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.int(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+          <p><code><a href="is.bool.html">is.bool(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.bool(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">is.int(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.int(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">is.factor(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.factor(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Raster value types</p></td>
       </tr><tr><td>
@@ -489,7 +489,7 @@
       </tr><tr><td>
           <p><code><a href="merge.html">merge(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="merge.html">merge(<i>&lt;SpatRasterCollection&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="merge.html">merge(<i>&lt;SpatExtent&gt;</i>,<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="merge.html">merge(<i>&lt;SpatVector&gt;</i>,<i>&lt;data.frame&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Merge SpatRaster or SpatExtent objects, or a SpatVector with a data.frame</p></td>
+        <td><p>Merge multiple SpatRaster objects or SpatExtent objects, or merge a SpatVector with a data.frame</p></td>
       </tr><tr><td>
           <p><code><a href="mergeTime.html">mergeTime(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> </p>
         </td>
@@ -518,6 +518,10 @@
           <p><code><a href="nearby.html">nearby(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="nearby.html">nearest(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
         <td><p>nearby geometries</p></td>
+      </tr><tr><td>
+          <p><code><a href="normalize_longitude.html">normalize.longitude(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>normalize vector data that crosses the dateline</p></td>
       </tr><tr><td>
           <p><code><a href="north.html">north()</a></code> </p>
         </td>
@@ -591,7 +595,7 @@
         </td>
         <td><p>Rasterize geometric properties of vector data</p></td>
       </tr><tr><td>
-          <p><code><a href="readwrite.html">readStart(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">readStop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">readValues(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">writeStart(<i>&lt;SpatRaster&gt;</i>,<i>&lt;character&gt;</i>)</a></code> <code><a href="readwrite.html">writeStop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">writeValues(<i>&lt;SpatRaster&gt;</i>,<i>&lt;vector&gt;</i>)</a></code> <code><a href="readwrite.html">fileBlocksize()</a></code> </p>
+          <p><code><a href="readwrite.html">readStart(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">readStop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">readValues(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">writeStart(<i>&lt;SpatRaster&gt;</i>,<i>&lt;character&gt;</i>)</a></code> <code><a href="readwrite.html">writeStop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">writeValues(<i>&lt;SpatRaster&gt;</i>,<i>&lt;vector&gt;</i>)</a></code> <code><a href="readwrite.html">blocks(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">fileBlocksize()</a></code> </p>
         </td>
         <td><p>Read from, or write to, file</p></td>
       </tr><tr><td>
@@ -599,9 +603,9 @@
         </td>
         <td><p>Rectify a SpatRaster</p></td>
       </tr><tr><td>
-          <p><code><a href="relate.html">relate(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="relate.html">is.related(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="relate.html">relate(<i>&lt;SpatVector&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
+          <p><code><a href="relate.html">relate(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="relate.html">relate(<i>&lt;SpatVector&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="relate.html">is.related(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="relate.html">which.related(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
-        <td><p>relate</p></td>
+        <td><p>Spatial relationships between geometries</p></td>
       </tr><tr><td>
           <p><code><a href="rep.html">rep(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
@@ -809,7 +813,7 @@
       </tr><tr><td>
           <p><code><a href="vrt.html">vrt(<i>&lt;character&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Virtual Raster Tiles</p></td>
+        <td><p>Virtual Raster Dataset</p></td>
       </tr><tr><td>
           <p><code><a href="weighted.mean.html">weighted.mean(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="weighted.mean.html">weighted.mean(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
