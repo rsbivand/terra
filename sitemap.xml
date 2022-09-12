@@ -370,7 +370,7 @@
     <loc>/reference/nearby.html</loc>
   </url>
   <url>
-    <loc>/reference/normalize_longitude.html</loc>
+    <loc>/reference/normalize.longitude.html</loc>
   </url>
   <url>
     <loc>/reference/north.html</loc>
@@ -467,6 +467,9 @@
   </url>
   <url>
     <loc>/reference/scatter.html</loc>
+  </url>
+  <url>
+    <loc>/reference/scoff.html</loc>
   </url>
   <url>
     <loc>/reference/sds.html</loc>

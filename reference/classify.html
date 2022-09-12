@@ -20,7 +20,7 @@ With "cuts" the values are sorted, so that the order in which they are provided 
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-11</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-18</span>
       </span>
     </div>
 
@@ -92,11 +92,10 @@ With "cuts" the values are sorted, so that the order in which they are provided 
 <dd><p>logical. If <code>TRUE</code>, intervals are have parenthesis or brackets around them to indicate whether they are open or closed. Only applies if <code>rcl</code> is a vector (or single column matrix)</p></dd>
  
 
-
-  <dt>filename</dt>
+ <dt>filename</dt>
 <dd><p>character. Output filename</p></dd>
 
-  <dt>...</dt>
+ <dt>...</dt>
 <dd><p>Additional arguments for writing files as in <code><a href="writeRaster.html">writeRaster</a></code></p></dd>
 
 
@@ -113,7 +112,8 @@ With "cuts" the values are sorted, so that the order in which they are provided 
     </div>
     <div id="note">
     <h2>Note</h2>
-    <p>For model-based classification see <code><a href="predict.html">predict</a></code></p>
+    <p>classify works with the "raw" values of categorical rasters, ignoring the levels (labels, categories). To change the labels of categorical rasters, use <code><a href="subst.html">subst</a></code> instead.</p>
+<p>For model-based classification see <code><a href="predict.html">predict</a></code></p>
     </div>
 
     <div id="ref-examples">
@@ -129,10 +129,12 @@ With "cuts" the values are sorted, so that the order in which they are provided 
 <span class="r-in"><span>       <span class="fl">0.5</span>, <span class="fl">1</span>, <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">rclmat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="va">m</span>, ncol<span class="op">=</span><span class="fl">3</span>, byrow<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">rc1</span> <span class="op">&lt;-</span> <span class="fu">classify</span><span class="op">(</span><span class="va">r</span>, <span class="va">rclmat</span>, include.lowest<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |---------|---------|---------|---------|=========================================                                          </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## cuts</span></span></span>
 <span class="r-in"><span><span class="co"># equivalent to the above, but now a categorical SpatRaster is returned </span></span></span>
 <span class="r-in"><span><span class="va">rc2</span> <span class="op">&lt;-</span> <span class="fu">classify</span><span class="op">(</span><span class="va">r</span>, <span class="fu"><a href="c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span>, include.lowest<span class="op">=</span><span class="cn">TRUE</span>, brackets<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |---------|---------|---------|---------|=========================================                                          </span>
 <span class="r-in"><span><span class="fu"><a href="freq.html">freq</a></span><span class="op">(</span><span class="va">rc2</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   layer      value count</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     1   [0–0.25]    25</span>
@@ -141,6 +143,7 @@ With "cuts" the values are sorted, so that the order in which they are provided 
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## is-becomes </span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">r</span><span class="op">*</span><span class="fl">3</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |---------|---------|---------|---------|=========================================                                          |---------|---------|---------|---------|=========================================                                          </span>
 <span class="r-in"><span><span class="fu"><a href="unique.html">unique</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     0</span>
@@ -149,6 +152,7 @@ With "cuts" the values are sorted, so that the order in which they are provided 
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4     3</span>
 <span class="r-in"><span><span class="co"># replace 0 with NA</span></span></span>
 <span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu">classify</span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="fl">0</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |---------|---------|---------|---------|=========================================                                          </span>
 <span class="r-in"><span><span class="fu"><a href="unique.html">unique</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     1</span>
@@ -163,6 +167,7 @@ With "cuts" the values are sorted, so that the order in which they are provided 
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    3  300</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">rcx1</span> <span class="op">&lt;-</span> <span class="fu">classify</span><span class="op">(</span><span class="va">x</span>, <span class="va">m</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |---------|---------|---------|---------|=========================================                                          </span>
 <span class="r-in"><span><span class="fu"><a href="unique.html">unique</a></span><span class="op">(</span><span class="va">rcx1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     0</span>
@@ -171,6 +176,7 @@ With "cuts" the values are sorted, so that the order in which they are provided 
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4   300</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">rcx2</span> <span class="op">&lt;-</span> <span class="fu">classify</span><span class="op">(</span><span class="va">x</span>, <span class="va">m</span>, others<span class="op">=</span><span class="cn">NA</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> |---------|---------|---------|---------|=========================================                                          </span>
 <span class="r-in"><span><span class="fu"><a href="unique.html">unique</a></span><span class="op">(</span><span class="va">rcx2</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   lyr.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1   200</span>
