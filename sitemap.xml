@@ -439,10 +439,13 @@
     <loc>/reference/rep.html</loc>
   </url>
   <url>
-    <loc>/reference/replace-vector.html</loc>
+    <loc>/reference/replace_dollar.html</loc>
   </url>
   <url>
-    <loc>/reference/replace.html</loc>
+    <loc>/reference/replace_layers.html</loc>
+  </url>
+  <url>
+    <loc>/reference/replace_values.html</loc>
   </url>
   <url>
     <loc>/reference/resample.html</loc>
@@ -524,6 +527,15 @@
   </url>
   <url>
     <loc>/reference/subset.html</loc>
+  </url>
+  <url>
+    <loc>/reference/subset_dollar.html</loc>
+  </url>
+  <url>
+    <loc>/reference/subset_double.html</loc>
+  </url>
+  <url>
+    <loc>/reference/subset_single.html</loc>
   </url>
   <url>
     <loc>/reference/subst.html</loc>
