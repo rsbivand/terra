@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-24</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-33</span>
       </span>
     </div>
 
@@ -231,7 +231,7 @@
         </td>
         <td><p>Get the coordinates of SpatVector geometries or SpatRaster cells</p></td>
       </tr><tr><td>
-          <p><code><a href="costDistance.html">costDistance(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+          <p><code><a href="costDistance.html">costDist(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Cost distance</p></td>
       </tr><tr><td>
@@ -239,7 +239,7 @@
         </td>
         <td><p>Replace values with values from another object</p></td>
       </tr><tr><td>
-          <p><code><a href="crop.html">crop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="crop.html">crop(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="crop.html">crop(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
+          <p><code><a href="crop.html">crop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="crop.html">crop(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="crop.html">crop(<i>&lt;SpatRasterCollection&gt;</i>)</a></code> <code><a href="crop.html">crop(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
         <td><p>Cut out a geographic subset</p></td>
       </tr><tr><td>
@@ -391,7 +391,7 @@
         </td>
         <td><p>global statistics</p></td>
       </tr><tr><td>
-          <p><code><a href="gridDistance.html">gridDistance(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+          <p><code><a href="gridDistance.html">gridDist(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Distance on a grid</p></td>
       </tr><tr><td>
@@ -427,11 +427,19 @@
         </td>
         <td><p>Make an inset map</p></td>
       </tr><tr><td>
+          <p><code><a href="interpIDW.html">interpIDW(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="interpIDW.html">interpIDW(<i>&lt;SpatRaster&gt;</i>,<i>&lt;matrix&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Interpolate points using a moving window</p></td>
+      </tr><tr><td>
+          <p><code><a href="interpNear.html">interpNear(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="interpNear.html">interpNear(<i>&lt;SpatRaster&gt;</i>,<i>&lt;matrix&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Nearest neighbor interpolation</p></td>
+      </tr><tr><td>
           <p><code><a href="interpolate.html">interpolate(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Interpolate</p></td>
       </tr><tr><td>
-          <p><code><a href="intersect.html">intersect(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatExtent&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatExtent&gt;</i>,<i>&lt;SpatExtent&gt;</i>)</a></code> </p>
+          <p><code><a href="intersect.html">intersect(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatExtent&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatExtent&gt;</i>,<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Intersection</p></td>
       </tr><tr><td>
@@ -479,7 +487,7 @@
         </td>
         <td><p>Value matching for SpatRasters</p></td>
       </tr><tr><td>
-          <p><code><a href="math-generics.html">sqrt(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="math-generics.html">log(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="math-generics.html">round(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="math-generics.html">math(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="math-generics.html">round(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
+          <p><code><a href="math-generics.html">sqrt(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="math-generics.html">log(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="math-generics.html">round(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="math-generics.html">math(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="math-generics.html">round(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="math-generics.html">cumsum(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>General mathematical methods</p></td>
       </tr><tr><td>
@@ -567,7 +575,7 @@
         </td>
         <td><p>Spatial model predictions</p></td>
       </tr><tr><td>
-          <p><code><a href="project.html">project(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="project.html">project(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="project.html">project(<i>&lt;matrix&gt;</i>)</a></code> </p>
+          <p><code><a href="project.html">project(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="project.html">project(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="project.html">project(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="project.html">project(<i>&lt;matrix&gt;</i>)</a></code> </p>
         </td>
         <td><p>Change the coordinate reference system</p></td>
       </tr><tr><td>
@@ -581,7 +589,7 @@
       </tr><tr><td>
           <p><code><a href="rapp.html">rapp(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Range-Apply</p></td>
+        <td><p>Range-apply</p></td>
       </tr><tr><td>
           <p><code><a href="rast.html">rast(<i>&lt;character&gt;</i>)</a></code> <code><a href="rast.html">rast(<i>&lt;missing&gt;</i>)</a></code> <code><a href="rast.html">rast(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="rast.html">rast(<i>&lt;matrix&gt;</i>)</a></code> <code><a href="rast.html">rast(<i>&lt;data.frame&gt;</i>)</a></code> <code><a href="rast.html">rast(<i>&lt;array&gt;</i>)</a></code> <code><a href="rast.html">rast(<i>&lt;list&gt;</i>)</a></code> <code><a href="rast.html">rast(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="rast.html">rast(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="rast.html">rast(<i>&lt;SpatExtent&gt;</i>)</a></code> </p>
         </td>
@@ -594,6 +602,14 @@
           <p><code><a href="rasterizeGeom.html">rasterizeGeom(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Rasterize geometric properties of vector data</p></td>
+      </tr><tr><td>
+          <p><code><a href="rasterizeWin.html">rasterizeWin(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="rasterizeWin.html">rasterizeWin(<i>&lt;data.frame&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Rasterize points with a moving window</p></td>
+      </tr><tr><td>
+          <p><code><a href="rcl.html">rcl(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Combine row, column, and layer numbers</p></td>
       </tr><tr><td>
           <p><code><a href="readwrite.html">readStart(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">readStop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">readValues(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">writeStart(<i>&lt;SpatRaster&gt;</i>,<i>&lt;character&gt;</i>)</a></code> <code><a href="readwrite.html">writeStop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">writeValues(<i>&lt;SpatRaster&gt;</i>,<i>&lt;vector&gt;</i>)</a></code> <code><a href="readwrite.html">blocks(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">fileBlocksize()</a></code> </p>
         </td>
@@ -698,6 +714,10 @@
           <p><code><a href="shift.html">shift(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="shift.html">shift(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="shift.html">shift(<i>&lt;SpatExtent&gt;</i>)</a></code> </p>
         </td>
         <td><p>Shift</p></td>
+      </tr><tr><td>
+          <p><code><a href="sieve.html">sieve(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Sieve filter</p></td>
       </tr><tr><td>
           <p><code><a href="simplify.html">simplifyGeom(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
@@ -815,6 +835,10 @@
         </td>
         <td><p>units of SpatRaster or SpatRasterDataSet</p></td>
       </tr><tr><td>
+          <p><code><a href="update.html">update(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Change values in a file</p></td>
+      </tr><tr><td>
           <p><code><a href="values.html">values(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="values.html">values(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
         <td><p>Cell values and geometry attributes</p></td>
@@ -826,6 +850,10 @@
           <p><code><a href="vector_layers.html">vector_layers()</a></code> </p>
         </td>
         <td><p>List or remove layers from a vector file</p></td>
+      </tr><tr><td>
+          <p><code><a href="viewshed.html">viewshed(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Compute a viewshed</p></td>
       </tr><tr><td>
           <p><code><a href="voronoi.html">voronoi(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="voronoi.html">delaunay(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
@@ -875,7 +903,7 @@
         </td>
         <td><p>Get or set single values of an extent</p></td>
       </tr><tr><td>
-          <p><code><a href="xyCellFrom.html">xFromCol(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">yFromRow(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">xyFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">xFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">yFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">colFromX(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">rowFromY(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">cellFromRowCol(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">cellFromRowColCombine(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">rowFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">colFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">rowColFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">cellFromXY(<i>&lt;SpatRaster&gt;</i>,<i>&lt;matrix&gt;</i>)</a></code> </p>
+          <p><code><a href="xyCellFrom.html">xFromCol(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">yFromRow(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">xyFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">xFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">yFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">colFromX(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">rowFromY(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">cellFromRowCol(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">cellFromRowColCombine(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">rowColCombine(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">rowFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">colFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">rowColFromCell(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="xyCellFrom.html">cellFromXY(<i>&lt;SpatRaster&gt;</i>,<i>&lt;matrix&gt;</i>)</a></code> </p>
         </td>
         <td><p>Coordinates from a row, column or cell number and vice versa</p></td>
       </tr><tr><td>

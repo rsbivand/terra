@@ -301,6 +301,12 @@
     <loc>/reference/inset.html</loc>
   </url>
   <url>
+    <loc>/reference/interpIDW.html</loc>
+  </url>
+  <url>
+    <loc>/reference/interpNear.html</loc>
+  </url>
+  <url>
     <loc>/reference/interpolate.html</loc>
   </url>
   <url>
@@ -427,6 +433,12 @@
     <loc>/reference/rasterizeGeom.html</loc>
   </url>
   <url>
+    <loc>/reference/rasterizeWin.html</loc>
+  </url>
+  <url>
+    <loc>/reference/rcl.html</loc>
+  </url>
+  <url>
     <loc>/reference/readwrite.html</loc>
   </url>
   <url>
@@ -503,6 +515,9 @@
   </url>
   <url>
     <loc>/reference/shift.html</loc>
+  </url>
+  <url>
+    <loc>/reference/sieve.html</loc>
   </url>
   <url>
     <loc>/reference/simplify.html</loc>
@@ -592,6 +607,9 @@
     <loc>/reference/units.html</loc>
   </url>
   <url>
+    <loc>/reference/update.html</loc>
+  </url>
+  <url>
     <loc>/reference/values.html</loc>
   </url>
   <url>
@@ -599,6 +617,9 @@
   </url>
   <url>
     <loc>/reference/vector_layers.html</loc>
+  </url>
+  <url>
+    <loc>/reference/viewshed.html</loc>
   </url>
   <url>
     <loc>/reference/voronoi.html</loc>

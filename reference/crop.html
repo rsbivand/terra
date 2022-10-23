@@ -19,7 +19,7 @@ You can crop a SpatVector with another SpatVector. If these are not polygons, th
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-24</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-33</span>
       </span>
     </div>
 
@@ -58,10 +58,13 @@ You can crop a SpatVector with another SpatVector. If these are not polygons, th
 
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for SpatRaster</span></span>
-<span><span class="fu">crop</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, snap<span class="op">=</span><span class="st">"near"</span>, mask<span class="op">=</span><span class="cn">FALSE</span>, touches<span class="op">=</span><span class="cn">TRUE</span>, filename<span class="op">=</span><span class="st">""</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">crop</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, snap<span class="op">=</span><span class="st">"near"</span>, mask<span class="op">=</span><span class="cn">FALSE</span>, touches<span class="op">=</span><span class="cn">TRUE</span>, extend<span class="op">=</span><span class="cn">FALSE</span>, filename<span class="op">=</span><span class="st">""</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for SpatRasterDataset</span></span>
-<span><span class="fu">crop</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, snap<span class="op">=</span><span class="st">"near"</span>, filename<span class="op">=</span><span class="st">""</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="fu">crop</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, snap<span class="op">=</span><span class="st">"near"</span>, extend<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for SpatRasterCollection</span></span>
+<span><span class="fu">crop</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, snap<span class="op">=</span><span class="st">"near"</span>, extend<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for SpatVector</span></span>
 <span><span class="fu">crop</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span></code></pre></div>
@@ -84,6 +87,9 @@ You can crop a SpatVector with another SpatVector. If these are not polygons, th
   <dt>touches</dt>
 <dd><p>logical. If <code>TRUE</code> and <code>mask=TRUE</code>, all cells touched by lines or polygons will be masked, not just those on the line render path, or whose center point is within the polygon</p></dd>
 
+  <dt>extend</dt>
+<dd><p>logical. Should rows and/or columns be added if <code>y</code> is beyond the extent of <code>x</code>? Also see <code><a href="extend.html">extend</a></code></p></dd>
+  
   <dt>filename</dt>
 <dd><p>character. Output filename</p></dd>
 
@@ -99,7 +105,7 @@ You can crop a SpatVector with another SpatVector. If these are not polygons, th
     </div>
     <div id="see-also">
     <h2>See also</h2>
-    <div class="dont-index"><p><code><a href="intersect.html">intersect</a></code></p></div>
+    <div class="dont-index"><p><code><a href="intersect.html">intersect</a></code>, <code><a href="extend.html">extend</a></code></p></div>
     </div>
 
     <div id="ref-examples">
