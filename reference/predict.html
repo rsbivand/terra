@@ -19,7 +19,7 @@ This approach of using model predictions is commonly used in remote sensing (for
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-40</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-45</span>
       </span>
     </div>
 
@@ -81,7 +81,7 @@ This approach of using model predictions is commonly used in remote sensing (for
 <dd><p>data.frame. Can be used to add a constant value as a predictor variable so that you do not need to make a SpatRaster layer for it</p></dd>
 
   <dt>na.rm</dt>
-<dd><p>logical. If <code>TRUE</code>, cells with <code>NA</code> values in the predictors are removed from the computation. This option prevents errors with models that cannot handle <code>NA</code> values. In most other cases this will not affect the output. An exception is when predicting with a model that returns predicted values even if some (or all!) variables are <code>NA</code></p></dd>
+<dd><p>logical. If <code>TRUE</code>, cells with <code>NA</code> values in the any of the layers of <code>x</code> are removed from the computation (even if the <code>NA</code> cell is in a layer that is not used as a variable in the model). This option prevents errors with models that cannot handle <code>NA</code> values when makeing predictions. In most other cases this will not affect the output. However, there are some models that return predicted values even if some (or all) variables are <code>NA</code></p></dd>
 
   <dt>index</dt>
 <dd><p>integer. To select subset of output variables</p></dd>
@@ -107,6 +107,10 @@ This approach of using model predictions is commonly used in remote sensing (for
     
 
 <p>SpatRaster</p>
+    </div>
+    <div id="see-also">
+    <h2>See also</h2>
+    <div class="dont-index"><p><code><a href="interpolate.html">interpolate</a></code> for spatial model prediction</p></div>
     </div>
 
     <div id="ref-examples">

@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-40</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-45</span>
       </span>
     </div>
 
@@ -445,7 +445,7 @@
       </tr><tr><td>
           <p><code><a href="interpolate.html">interpolate(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Interpolate</p></td>
+        <td><p>Spatial interpolation</p></td>
       </tr><tr><td>
           <p><code><a href="intersect.html">intersect(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatExtent&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatExtent&gt;</i>,<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="intersect.html">intersect(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
@@ -475,7 +475,7 @@
         </td>
         <td><p>Linear units of the coordinate reference system</p></td>
       </tr><tr><td>
-          <p><code><a href="lines.html">points(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="lines.html">lines(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="lines.html">polys(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="lines.html">points(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="lines.html">lines(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="lines.html">polys(<i>&lt;SpatExtent&gt;</i>)</a></code> </p>
+          <p><code><a href="lines.html">points(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="lines.html">lines(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="lines.html">polys(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="lines.html">points(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="lines.html">lines(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="lines.html">polys(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="lines.html">points(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="lines.html">lines(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="lines.html">polys(<i>&lt;SpatExtent&gt;</i>)</a></code> </p>
         </td>
         <td><p>Add SpatVector data to a map</p></td>
       </tr><tr><td>
@@ -663,6 +663,10 @@
         </td>
         <td><p>rescale</p></td>
       </tr><tr><td>
+          <p><code><a href="roll.html">roll(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="roll.html">roll(<i>&lt;numeric&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Rolling (moving) functions</p></td>
+      </tr><tr><td>
           <p><code><a href="rotate.html">rotate(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="rotate.html">rotate(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
         <td><p>Rotate data along longitude</p></td>
@@ -783,7 +787,7 @@
         </td>
         <td><p>replace cell values</p></td>
       </tr><tr><td>
-          <p><code><a href="summarize-generics.html">min(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">max(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">range(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">prod(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">sum(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">any(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">all(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">range(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">which.min(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">which.max(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">stdev(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">mean(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">median(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+          <p><code><a href="summarize-generics.html">min(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">max(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">range(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">prod(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">sum(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">any(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">all(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">range(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">which.min(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">which.max(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">stdev(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">mean(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">median(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">anyNA(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">noNA(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">allNA(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Summarize</p></td>
       </tr><tr><td>
