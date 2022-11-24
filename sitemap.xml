@@ -205,6 +205,9 @@
     <loc>/reference/draw.html</loc>
   </url>
   <url>
+    <loc>/reference/elongate.html</loc>
+  </url>
+  <url>
     <loc>/reference/erase.html</loc>
   </url>
   <url>
@@ -269,6 +272,9 @@
   </url>
   <url>
     <loc>/reference/global.html</loc>
+  </url>
+  <url>
+    <loc>/reference/graticule.html</loc>
   </url>
   <url>
     <loc>/reference/gridDist.html</loc>
@@ -407,6 +413,12 @@
   </url>
   <url>
     <loc>/reference/plotRGB.html</loc>
+  </url>
+  <url>
+    <loc>/reference/plot_extent.html</loc>
+  </url>
+  <url>
+    <loc>/reference/plot_graticule.html</loc>
   </url>
   <url>
     <loc>/reference/predict.html</loc>
