@@ -241,10 +241,10 @@
     <loc>/reference/focal3D.html</loc>
   </url>
   <url>
-    <loc>/reference/focalCor.html</loc>
+    <loc>/reference/focalCpp.html</loc>
   </url>
   <url>
-    <loc>/reference/focalCpp.html</loc>
+    <loc>/reference/focalLyr.html</loc>
   </url>
   <url>
     <loc>/reference/focalMat.html</loc>
@@ -431,6 +431,9 @@
   </url>
   <url>
     <loc>/reference/query.html</loc>
+  </url>
+  <url>
+    <loc>/reference/rangeFill.html</loc>
   </url>
   <url>
     <loc>/reference/rapp.html</loc>
