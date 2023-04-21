@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">terra</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6-51</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.7-29</span>
       </span>
     </div>
 
@@ -107,7 +107,7 @@
         </td>
         <td><p>Estimate values for cell values that are <code>NA</code> by interpolating between layers</p></td>
       </tr><tr><td>
-          <p><code><a href="arith-generic.html">Arith-methods</a></code> <code><a href="arith-generic.html">Arith,SpatExtent,numeric-method</a></code> <code><a href="arith-generic.html">Arith,numeric,SpatExtent-method</a></code> <code><a href="arith-generic.html">Arith,SpatExtent,SpatExtent-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatVector,SpatVector-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,missing-method</a></code> <code><a href="arith-generic.html">Arith,numeric,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,numeric-method</a></code> <code><a href="arith-generic.html">Arith,logical,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,logical-method</a></code> <code><a href="arith-generic.html">Arith,missing,SpatRaster-method</a></code> </p>
+          <p><code><a href="arith-generic.html">Arith-methods</a></code> <code><a href="arith-generic.html">Arith,SpatExtent,numeric-method</a></code> <code><a href="arith-generic.html">Arith,numeric,SpatExtent-method</a></code> <code><a href="arith-generic.html">Arith,SpatExtent,SpatExtent-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatVector,SpatVector-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,missing-method</a></code> <code><a href="arith-generic.html">Arith,numeric,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,numeric-method</a></code> <code><a href="arith-generic.html">Arith,logical,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,logical-method</a></code> <code><a href="arith-generic.html">Arith,missing,SpatRaster-method</a></code> <code><a href="arith-generic.html">Arith,SpatRaster,matrix-method</a></code> <code><a href="arith-generic.html">Arith,matrix,SpatRaster-method</a></code> </p>
         </td>
         <td><p>Arithmetic</p></td>
       </tr><tr><td>
@@ -119,9 +119,9 @@
         </td>
         <td><p>SpatRaster or SpatVector to data.frame</p></td>
       </tr><tr><td>
-          <p><code><a href="as.list.html">as.list(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="as.list.html">as.list(<i>&lt;SpatRasterCollection&gt;</i>)</a></code> <code><a href="as.list.html">as.list(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
+          <p><code><a href="as.list.html">as.list(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="as.list.html">as.list(<i>&lt;SpatRasterCollection&gt;</i>)</a></code> <code><a href="as.list.html">as.list(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="as.list.html">as.list(<i>&lt;SpatVectorCollection&gt;</i>)</a></code> </p>
         </td>
-        <td><p>SpatRaster* or SpatVector to list</p></td>
+        <td><p>Coerce a Spat* object to a list</p></td>
       </tr><tr><td>
           <p><code><a href="as.raster.html">as.raster(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
@@ -183,6 +183,10 @@
         </td>
         <td><p>Clamp values</p></td>
       </tr><tr><td>
+          <p><code><a href="clamp_ts.html">clamp_ts(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>clamp time series data</p></td>
+      </tr><tr><td>
           <p><code><a href="classify.html">classify(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Classify (or reclassify) cell values</p></td>
@@ -207,7 +211,7 @@
         </td>
         <td><p>Combine geometries</p></td>
       </tr><tr><td>
-          <p><code><a href="compare-generics.html">Compare-methods</a></code> <code><a href="compare-generics.html">Logic-methods</a></code> <code><a href="compare-generics.html">Compare,SpatRaster,SpatRaster-method</a></code> <code><a href="compare-generics.html">Compare,numeric,SpatRaster-method</a></code> <code><a href="compare-generics.html">Compare,SpatRaster,numeric-method</a></code> <code><a href="compare-generics.html">Compare,SpatRaster,character-method</a></code> <code><a href="compare-generics.html">Logic,SpatRaster,SpatRaster-method</a></code> <code><a href="compare-generics.html">Logic,SpatRaster,numeric-method</a></code> <code><a href="compare-generics.html">Logic,numeric,SpatRaster-method</a></code> <code><a href="compare-generics.html">Logic,SpatRaster,logical-method</a></code> <code><a href="compare-generics.html">Logic,logical,SpatRaster-method</a></code> <code><a href="compare-generics.html">Compare,SpatExtent,SpatExtent-method</a></code> <code><a href="compare-generics.html">is.na,SpatRaster-method</a></code> <code><a href="compare-generics.html">is.nan,SpatRaster-method</a></code> <code><a href="compare-generics.html">!,SpatRaster-method</a></code> <code><a href="compare-generics.html">is.finite,SpatRaster-method</a></code> <code><a href="compare-generics.html">is.infinite,SpatRaster-method</a></code> </p>
+          <p><code><a href="compare-generics.html">compare(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="compare-generics.html">logic(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Compare and logical methods</p></td>
       </tr><tr><td>
@@ -327,7 +331,7 @@
         </td>
         <td><p>Extract values from a SpatRaster</p></td>
       </tr><tr><td>
-          <p><code><a href="factors.html">levels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">`levels&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">categories(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">droplevels(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+          <p><code><a href="factors.html">levels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">`levels&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">categories(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">droplevels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">addCats(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Categorical rasters</p></td>
       </tr><tr><td>
@@ -403,6 +407,10 @@
         </td>
         <td><p>Distance on a grid</p></td>
       </tr><tr><td>
+          <p><code><a href="halo.html">halo()</a></code> </p>
+        </td>
+        <td><p>Add halo-ed text to a plot</p></td>
+      </tr><tr><td>
           <p><code><a href="headtail.html">head()</a></code> <code><a href="headtail.html">tail()</a></code> </p>
         </td>
         <td><p>head and tail of a SpatRaster or SpatVector</p></td>
@@ -471,13 +479,17 @@
         </td>
         <td><p>Correlation and (weighted) covariance</p></td>
       </tr><tr><td>
+          <p><code><a href="legend.html">add_legend()</a></code> </p>
+        </td>
+        <td><p>add a custom legend</p></td>
+      </tr><tr><td>
           <p><code><a href="linearUnits.html">linearUnits(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="linearUnits.html">linearUnits(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
         <td><p>Linear units of the coordinate reference system</p></td>
       </tr><tr><td>
           <p><code><a href="lines.html">points(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="lines.html">lines(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="lines.html">polys(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="lines.html">points(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="lines.html">lines(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="lines.html">polys(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="lines.html">points(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="lines.html">lines(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="lines.html">polys(<i>&lt;SpatExtent&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Add SpatVector data to a map</p></td>
+        <td><p>Add points, lines, or polygons to a map</p></td>
       </tr><tr><td>
           <p><code><a href="makeTiles.html">makeTiles(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
@@ -514,6 +526,10 @@
           <p><code><a href="mergeTime.html">mergeTime(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> </p>
         </td>
         <td><p>merge SpatRasters by timelines to create a single timeseries</p></td>
+      </tr><tr><td>
+          <p><code><a href="meta.html">meta(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>meta</p></td>
       </tr><tr><td>
           <p><code><a href="minmax.html">minmax(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="minmax.html">hasMinMax(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="minmax.html">setMinMax(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
@@ -558,6 +574,10 @@
           <p><code><a href="pairs.html">pairs(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Pairs plot (matrix of scatterplots)</p></td>
+      </tr><tr><td>
+          <p><code><a href="panel.html">panel(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Map panel</p></td>
       </tr><tr><td>
           <p><code><a href="patches.html">patches(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
@@ -643,6 +663,10 @@
         </td>
         <td><p>Rectify a SpatRaster</p></td>
       </tr><tr><td>
+          <p><code><a href="regress.html">regress(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="regress.html">regress(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+        </td>
+        <td><p>Cell level regression</p></td>
+      </tr><tr><td>
           <p><code><a href="relate.html">relate(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="relate.html">relate(<i>&lt;SpatVector&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="relate.html">is.related(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
         <td><p>Spatial relationships between geometries</p></td>
@@ -678,6 +702,10 @@
           <p><code><a href="rotate.html">rotate(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="rotate.html">rotate(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
         <td><p>Rotate data along longitude</p></td>
+      </tr><tr><td>
+          <p><code><a href="same.crs.html">same.crs()</a></code> </p>
+        </td>
+        <td><p>Compare coordinate reference systems</p></td>
       </tr><tr><td>
           <p><code><a href="sample.html">spatSample(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="sample.html">spatSample(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="sample.html">spatSample(<i>&lt;SpatExtent&gt;</i>)</a></code> </p>
         </td>
@@ -751,9 +779,9 @@
         </td>
         <td><p>simplifyGeom geometries</p></td>
       </tr><tr><td>
-          <p><code><a href="sort.html">sort(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+          <p><code><a href="sort.html">sort(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="sort.html">sort(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
-        <td><p>Sort a SpatRaster</p></td>
+        <td><p>Sort a SpatRaster or SpatVector</p></td>
       </tr><tr><td>
           <p><code><a href="sources.html">sources(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="sources.html">sources(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="sources.html">hasValues(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="sources.html">inMemory(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
@@ -763,7 +791,7 @@
         </td>
         <td><p>spin a SpatVector</p></td>
       </tr><tr><td>
-          <p><code><a href="split.html">split(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="split.html">split(<i>&lt;SpatVector&gt;</i>)</a></code> </p>
+          <p><code><a href="split.html">split(<i>&lt;SpatRaster&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> <code><a href="split.html">split(<i>&lt;SpatVector&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> <code><a href="split.html">split(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
         <td><p>Split</p></td>
       </tr><tr><td>
@@ -787,7 +815,7 @@
         </td>
         <td><p>Subset a SpatRaster or a SpatVector</p></td>
       </tr><tr><td>
-          <p><code><a href="subset_single.html">`[`(<i>&lt;SpatRaster&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> <code><a href="subset_single.html">`[`(<i>&lt;SpatVector&gt;</i>,<i>&lt;numeric&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="subset_single.html">`[`(<i>&lt;SpatExtent&gt;</i>,<i>&lt;numeric&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
+          <p><code><a href="subset_single.html">`[`(<i>&lt;SpatRaster&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;ANY&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> <code><a href="subset_single.html">`[`(<i>&lt;SpatVector&gt;</i>,<i>&lt;numeric&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="subset_single.html">`[`(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="subset_single.html">`[`(<i>&lt;SpatExtent&gt;</i>,<i>&lt;numeric&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> </p>
         </td>
         <td><p>Extract values from a SpatRaster, SpatVector or SpatExtent</p></td>
       </tr><tr><td>
@@ -795,7 +823,7 @@
         </td>
         <td><p>replace cell values</p></td>
       </tr><tr><td>
-          <p><code><a href="summarize-generics.html">min(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">max(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">range(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">prod(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">sum(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">any(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">all(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">range(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">which.min(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">which.max(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">stdev(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">mean(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">median(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">anyNA(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">noNA(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">allNA(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
+          <p><code><a href="summarize-generics.html">min(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">max(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">range(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">prod(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">sum(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">any(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">all(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">range(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">which.min(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">which.max(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">stdev(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">mean(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">median(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">anyNA(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">countNA(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">noNA(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="summarize-generics.html">allNA(<i>&lt;SpatRaster&gt;</i>)</a></code> </p>
         </td>
         <td><p>Summarize</p></td>
       </tr><tr><td>
@@ -871,7 +899,7 @@
         </td>
         <td><p>Cell values and geometry attributes</p></td>
       </tr><tr><td>
-          <p><code><a href="vect.html">vect(<i>&lt;character&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;matrix&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;data.frame&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;list&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;sf&gt;</i>)</a></code> </p>
+          <p><code><a href="vect.html">vect(<i>&lt;character&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;matrix&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;data.frame&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;list&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;SpatVectorCollection&gt;</i>)</a></code> <code><a href="vect.html">vect(<i>&lt;sf&gt;</i>)</a></code> </p>
         </td>
         <td><p>Create SpatVector objects</p></td>
       </tr><tr><td>
@@ -935,7 +963,7 @@
         </td>
         <td><p>Coordinates from a row, column or cell number and vice versa</p></td>
       </tr><tr><td>
-          <p><code><a href="zonal.html">zonal(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="zonal.html">zonal(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> </p>
+          <p><code><a href="zonal.html">zonal(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="zonal.html">zonal(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="zonal.html">zonal(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> </p>
         </td>
         <td><p>Zonal statistics</p></td>
       </tr><tr><td>
