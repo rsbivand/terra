@@ -70,13 +70,19 @@
     <loc>/reference/as.data.frame.html</loc>
   </url>
   <url>
+    <loc>/reference/as.lines.html</loc>
+  </url>
+  <url>
     <loc>/reference/as.list.html</loc>
   </url>
   <url>
-    <loc>/reference/as.raster.html</loc>
+    <loc>/reference/as.points.html</loc>
   </url>
   <url>
-    <loc>/reference/as.spatvector.html</loc>
+    <loc>/reference/as.polygons.html</loc>
+  </url>
+  <url>
+    <loc>/reference/as.raster.html</loc>
   </url>
   <url>
     <loc>/reference/atan2.html</loc>
@@ -154,13 +160,13 @@
     <loc>/reference/convhull.html</loc>
   </url>
   <url>
-    <loc>/reference/coords.html</loc>
-  </url>
-  <url>
     <loc>/reference/costDist.html</loc>
   </url>
   <url>
     <loc>/reference/cover.html</loc>
+  </url>
+  <url>
+    <loc>/reference/crds.html</loc>
   </url>
   <url>
     <loc>/reference/crop.html</loc>
@@ -334,7 +340,7 @@
     <loc>/reference/is.lonlat.html</loc>
   </url>
   <url>
-    <loc>/reference/isvalid.html</loc>
+    <loc>/reference/is.valid.html</loc>
   </url>
   <url>
     <loc>/reference/lapp.html</loc>
@@ -689,6 +695,9 @@
   </url>
   <url>
     <loc>/reference/wrap.html</loc>
+  </url>
+  <url>
+    <loc>/reference/wrapCache.html</loc>
   </url>
   <url>
     <loc>/reference/writeCDF.html</loc>
