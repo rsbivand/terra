@@ -235,6 +235,9 @@
     <loc>/reference/extract.html</loc>
   </url>
   <url>
+    <loc>/reference/extractAlong.html</loc>
+  </url>
+  <url>
     <loc>/reference/factors.html</loc>
   </url>
   <url>
@@ -266,6 +269,9 @@
   </url>
   <url>
     <loc>/reference/focalValues.html</loc>
+  </url>
+  <url>
+    <loc>/reference/forceCCW.html</loc>
   </url>
   <url>
     <loc>/reference/freq.html</loc>
@@ -338,6 +344,9 @@
   </url>
   <url>
     <loc>/reference/is.lonlat.html</loc>
+  </url>
+  <url>
+    <loc>/reference/is.rotated.html</loc>
   </url>
   <url>
     <loc>/reference/is.valid.html</loc>
@@ -677,6 +686,9 @@
   </url>
   <url>
     <loc>/reference/vrt.html</loc>
+  </url>
+  <url>
+    <loc>/reference/vrt_tiles.html</loc>
   </url>
   <url>
     <loc>/reference/weighted.mean.html</loc>
