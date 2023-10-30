@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">terra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.7-55</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.7-58</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,10 +95,10 @@
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>If <code>fun</code> is one of the three standard statistics, you get a list with two items: the correlation or (weighted) covariance matrix, and the (weighted) means.</p>
+<p>If <code>fun</code> is one of the three standard statistics, you get a list with two items: the correlation or (weighted) covariance matrix, and the (weighted) means. The means are also a matrix because they may depend on the combination of layers if different cells have NAs and are excluded from the computation. The rows of the mean matrix represent the layer whose (weighted) mean is being calculated and the columns represent the layer it is being paired with. Only cells with complete pair observations for both layers are used in the calculation of the (weighted) mean. The diagonal of the mean matrices are assigned NA.</p>
 
 
-<p>If <code>fun</code> is a function, you get a matrix.</p>
+<p>If <code>fun</code> is a function, you get a single matrix.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -135,8 +135,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> blue  4993.165 4974.478 4962.942</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $mean</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      red    green     blue </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 182.2855 185.3509 192.8046 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            red    green     blue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> red   182.2855 182.2855 182.2855</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> green 185.3509 185.3509 185.3509</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blue  192.8046 192.8046 192.8046</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># weigh by column number</span></span></span>
@@ -149,8 +151,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> blue  5009.851 4987.092 4937.007</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $weighted_mean</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      red    green     blue </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 177.5983 181.3521 191.5236 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            red    green     blue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> red   177.5983 177.5983 177.5983</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> green 181.3521 181.3521 181.3521</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blue  191.5236 191.5236 191.5236</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
