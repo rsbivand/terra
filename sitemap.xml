@@ -241,6 +241,9 @@
     <loc>https://rspatial.github.io/terra/reference/extractAlong.html</loc>
   </url>
   <url>
+    <loc>https://rspatial.github.io/terra/reference/extractRange.html</loc>
+  </url>
+  <url>
     <loc>https://rspatial.github.io/terra/reference/factors.html</loc>
   </url>
   <url>
@@ -472,6 +475,9 @@
     <loc>https://rspatial.github.io/terra/reference/predict.html</loc>
   </url>
   <url>
+    <loc>https://rspatial.github.io/terra/reference/princomp.html</loc>
+  </url>
+  <url>
     <loc>https://rspatial.github.io/terra/reference/project.html</loc>
   </url>
   <url>
@@ -607,7 +613,7 @@
     <loc>https://rspatial.github.io/terra/reference/split.html</loc>
   </url>
   <url>
-    <loc>https://rspatial.github.io/terra/reference/src.html</loc>
+    <loc>https://rspatial.github.io/terra/reference/sprc.html</loc>
   </url>
   <url>
     <loc>https://rspatial.github.io/terra/reference/stretch.html</loc>
