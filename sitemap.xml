@@ -97,6 +97,9 @@
     <loc>https://rspatial.github.io/terra/reference/boundaries.html</loc>
   </url>
   <url>
+    <loc>https://rspatial.github.io/terra/reference/box.html</loc>
+  </url>
+  <url>
     <loc>https://rspatial.github.io/terra/reference/boxplot.html</loc>
   </url>
   <url>
@@ -313,6 +316,9 @@
     <loc>https://rspatial.github.io/terra/reference/hist.html</loc>
   </url>
   <url>
+    <loc>https://rspatial.github.io/terra/reference/identical.html</loc>
+  </url>
+  <url>
     <loc>https://rspatial.github.io/terra/reference/ifelse.html</loc>
   </url>
   <url>
@@ -470,6 +476,9 @@
   </url>
   <url>
     <loc>https://rspatial.github.io/terra/reference/plot_graticule.html</loc>
+  </url>
+  <url>
+    <loc>https://rspatial.github.io/terra/reference/prcomp.html</loc>
   </url>
   <url>
     <loc>https://rspatial.github.io/terra/reference/predict.html</loc>
@@ -740,6 +749,9 @@
   </url>
   <url>
     <loc>https://rspatial.github.io/terra/reference/writeVector.html</loc>
+  </url>
+  <url>
+    <loc>https://rspatial.github.io/terra/reference/xapp.html</loc>
   </url>
   <url>
     <loc>https://rspatial.github.io/terra/reference/xmin.html</loc>

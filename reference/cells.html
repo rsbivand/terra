@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">terra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.7-67</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.7-72</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,6 +89,9 @@
 
   <dt>touches</dt>
 <dd><p>logical. If <code>TRUE</code>, values for all cells touched by lines or polygons are extracted, not just those on the line render path, or whose center point is within the polygon. Not relevant for points</p></dd>
+
+  <dt>small</dt>
+<dd><p>logical. If <code>TRUE</code>, values for all cells in touched polygons are extracted if none of the cells center points is within the polygon; even if <code>touches=FALSE</code></p></dd>
 
 </dl></div>
     <div class="section level2">
