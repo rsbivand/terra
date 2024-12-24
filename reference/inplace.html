@@ -17,7 +17,7 @@ set.crs is the in-place replacement version of crs&amp;lt;-'><meta property="og:
 
     <a class="navbar-brand me-2" href="../index.html">terra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-7</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,6 +74,8 @@ set.crs is the in-place replacement version of crs&amp;lt;-'><meta property="og:
 <span></span>
 <span><span class="co"># S4 method for class 'SpatRaster'</span></span>
 <span><span class="fu">set.values</span><span class="op">(</span><span class="va">x</span>, <span class="va">cells</span>, <span class="va">values</span>, layer<span class="op">=</span><span class="fl">0</span><span class="op">)</span></span>
+<span><span class="co"># S4 method for class 'SpatRasterDataset'</span></span>
+<span><span class="fu">set.values</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for class 'SpatRaster'</span></span>
 <span><span class="fu">set.cats</span><span class="op">(</span><span class="va">x</span>, layer<span class="op">=</span><span class="fl">1</span>, <span class="va">value</span>, active<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span>
@@ -148,6 +150,16 @@ set.crs is the in-place replacement version of crs&amp;lt;-'><meta property="og:
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">#values from file to memory</span></span></span>
 <span class="r-in"><span><span class="fu">set.values</span><span class="op">(</span><span class="va">r</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> class       : SpatRaster </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> dimensions  : 90, 95, 1  (nrow, ncol, nlyr)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> resolution  : 0.008333333, 0.008333333  (x, y)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> extent      : 5.741667, 6.533333, 49.44167, 50.19167  (xmin, xmax, ymin, ymax)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> coord. ref. : lon/lat WGS 84 (EPSG:4326) </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> source(s)   : memory</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> varname     : elev </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> name        : elevation </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> min value   :       141 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> max value   :       547 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># change values</span></span></span>
 <span class="r-in"><span><span class="fu">set.values</span><span class="op">(</span><span class="va">r</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">1000</span>, <span class="fl">900</span><span class="op">)</span></span></span>

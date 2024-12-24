@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">terra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-7</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -411,7 +411,7 @@
         <dd>Density plot</dd>
       </dl><dl><dt>
 
-          <code><a href="deprecated.html">area(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="deprecated.html">gridDistance(<i>&lt;SpatRaster&gt;</i>)</a></code>
+          <code><a href="deprecated.html">gridDistance(<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
         <dd>deprecated methods</dd>
@@ -457,6 +457,12 @@
 
         </dt>
         <dd>Geographic distance</dd>
+      </dl><dl><dt>
+
+          <code><a href="divide.html">divide(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="divide.html">divide(<i>&lt;SpatVector&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Subdivide a raster or polygons</dd>
       </dl><dl><dt>
 
           <code><a href="dots.html">dots(<i>&lt;SpatVector&gt;</i>)</a></code>
@@ -699,7 +705,7 @@
         <dd>Initialize a SpatRaster with values</dd>
       </dl><dl><dt>
 
-          <code><a href="inplace.html">set.names(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.names(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="inplace.html">set.names(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.ext(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.ext(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.crs(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.crs(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.values(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.RGB(<i>&lt;SpatRaster&gt;</i>)</a></code>
+          <code><a href="inplace.html">set.names(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.names(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="inplace.html">set.names(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.ext(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.ext(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.crs(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.crs(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.values(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.values(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="inplace.html">set.cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.RGB(<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
         <dd>Change values in-place</dd>
@@ -867,7 +873,7 @@
         <dd>meta</dd>
       </dl><dl><dt>
 
-          <code><a href="metags.html">`metags&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="metags.html">metags(<i>&lt;SpatRaster&gt;</i>)</a></code>
+          <code><a href="metags.html">`metags&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="metags.html">metags(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="metags.html">`metags&lt;-`(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="metags.html">metags(<i>&lt;SpatRasterDataset&gt;</i>)</a></code>
 
         </dt>
         <dd>Set or get metadata</dd>
@@ -925,6 +931,12 @@
 
         </dt>
         <dd>is not NA</dd>
+      </dl><dl><dt>
+
+          <code><a href="nseg.html">nseg(<i>&lt;SpatVector&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Number of segments</dd>
       </dl><dl><dt>
 
           <code><a href="origin.html">origin(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="origin.html">`origin&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code>
@@ -1185,6 +1197,12 @@
         <dd>Scale values</dd>
       </dl><dl><dt>
 
+          <code><a href="scale_linear.html">scale_linear(<i>&lt;SpatRaster&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Scale values linearly</dd>
+      </dl><dl><dt>
+
           <code><a href="scatter.html">plot(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
@@ -1405,6 +1423,12 @@
 
         </dt>
         <dd>Temporary files</dd>
+      </dl><dl><dt>
+
+          <code><a href="toMemory.html">toMemory(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="toMemory.html">toMemory(<i>&lt;SpatRasterDataset&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Read all cell values into memory</dd>
       </dl><dl><dt>
 
           <code><a href="topology.html">mergeLines(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="topology.html">snap(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="topology.html">removeDupNodes(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="topology.html">makeNodes(<i>&lt;SpatVector&gt;</i>)</a></code>
