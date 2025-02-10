@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">terra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-9</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-22</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,7 +102,7 @@
           <code><a href="adjacent.html">adjacent(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="adjacent.html">adjacent(<i>&lt;SpatVector&gt;</i>)</a></code>
 
         </dt>
-        <dd>Adjacent cells</dd>
+        <dd>Adjacent cells or polygons</dd>
       </dl><dl><dt>
 
           <code><a href="aggregate.html">aggregate(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="aggregate.html">aggregate(<i>&lt;SpatVector&gt;</i>)</a></code>
@@ -207,7 +207,7 @@
         <dd>Bar plot of a SpatRaster</dd>
       </dl><dl><dt>
 
-          <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;data.frame&gt;</i>)</a></code>
+          <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;data.frame&gt;</i>)</a></code> <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;matrix&gt;</i>)</a></code>
 
         </dt>
         <dd>bestMatch</dd>
@@ -297,7 +297,7 @@
         <dd>Query by clicking on a map</dd>
       </dl><dl><dt>
 
-          <code><a href="coerce.html">as.vector(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.matrix(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.array(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.vector(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="coerce.html">as.matrix(<i>&lt;SpatExtent&gt;</i>)</a></code>
+          <code><a href="coerce.html">as.vector(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.matrix(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.array(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.array(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="coerce.html">as.vector(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="coerce.html">as.matrix(<i>&lt;SpatExtent&gt;</i>)</a></code>
 
         </dt>
         <dd>Coercion to vector, matrix or array</dd>
@@ -751,6 +751,12 @@
 
         </dt>
         <dd>Check if a SpatExtent or SpatVector is empty</dd>
+      </dl><dl><dt>
+
+          <code><a href="is.flipped.html">is.flipped(<i>&lt;SpatRaster&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Check for rotation</dd>
       </dl><dl><dt>
 
           <code><a href="is.lonlat.html">is.lonlat(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.lonlat.html">is.lonlat(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="is.lonlat.html">is.lonlat(<i>&lt;character&gt;</i>)</a></code>
@@ -1411,6 +1417,12 @@
 
         </dt>
         <dd>Add labels to a map</dd>
+      </dl><dl><dt>
+
+          <code><a href="thresh.html">thresh(<i>&lt;SpatRaster&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Thresholding</dd>
       </dl><dl><dt>
 
           <code><a href="time.html">has.time(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="time.html">time(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="time.html">`time&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="time.html">timeInfo(<i>&lt;SpatRaster&gt;</i>)</a></code>
