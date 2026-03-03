@@ -27,8 +27,8 @@ plet(x, col, alpha=0.8, main=names(x),
 
 # S4 method for class 'SpatVector'
 plet(x, y="", col, main=y, cex=1, 
-  lwd=2, lty=NULL, border="black", alpha=c(0.3, 1), popup=TRUE, label=FALSE, split=FALSE,
-  tiles=c("Streets", "Esri.WorldImagery", "OpenTopoMap"), 
+  lwd=2, lty=NULL, border="black", alpha=c(0.3, 1), popup=TRUE, label=FALSE,
+  split=FALSE, tiles=c("Streets", "Esri.WorldImagery", "OpenTopoMap"), 
   wrap=TRUE, legend="bottomright", collapse=FALSE, type=NULL, breaks=NULL,
   breakby="eqint", sort=TRUE, reverse=FALSE, map=NULL, fill=NULL, ...)
 
@@ -42,7 +42,8 @@ plet(x, y="", col, main=y, cex=1,
 
 
 # S4 method for class 'leaflet'
-lines(x, y, col, lwd=2, lty=NULL, alpha=1, ...)
+lines(x, y, col, lwd=2, lty=NULL, alpha=1, 
+  label=NULL, popup=FALSE,...)
 
 # S4 method for class 'leaflet'
 points(x, y, col, border=col, cex=1, lwd=2, lty=NULL, 
@@ -50,7 +51,7 @@ points(x, y, col, border=col, cex=1, lwd=2, lty=NULL,
 
 # S4 method for class 'leaflet'
 polys(x, y, col, lwd=2, lty=NULL, 
-  border="black", alpha=c(0.3, 1), popup=TRUE, label=FALSE, fill=NULL, ...)
+  border="black", alpha=c(0.3, 1), popup=TRUE, label=NULL, fill=NULL, ...)
 ```
 
 ## Arguments
@@ -212,7 +213,7 @@ if (require(leaflet) && (packageVersion("leaflet") > "2.1.1")) {
 
 v <- vect(system.file("ex/lux.shp", package="terra"))
 p <- spatSample(as.polygons(v, ext=T), 30)
-values(p) = data.frame(id=11:40, name=letters[1:30])
+values(p) = data.frame(id=11:40, name=sample(letters, 30, replace=TRUE))
 
 m <- plet(v, "NAME_1", tiles="", border="blue")
 m <- points(m, p, col="red", cex=2, popup=T)

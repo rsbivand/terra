@@ -52,5 +52,5 @@ character
 
 ``` r
 tmpFiles()
-#> [1] "/tmp/RtmpD1Nd7o/spat_23d24101a5bb_9170_DvggOkjkTOQeAAI.vrt"
+#> [1] "/tmp/Rtmpq6lPOw/spat_21e424980bc3_8676_DvggOkjkTOQeAAI.vrt"
 ```

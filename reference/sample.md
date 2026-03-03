@@ -48,9 +48,9 @@ spatSample(x, size, method="random", lonlat, as.points=FALSE, exact=FALSE)
 
 - method:
 
-  character. Should be "regular" or "random", If `x` is a `SpatRaster`,
-  it can also be "stratified" (each value in `x` is a stratum),
-  "weights" (each value in `x` is a probability weight), or "spread" (an
+  character. Should be one of "regular", "random", or, if `x` is a
+  `SpatRaster`, "stratified" (each value in `x` is a stratum), "weights"
+  (each value in `x` is a probability weight), or "spread" (an
   approximately regular sample, using compact zones generated with
   [`k_means`](https://rspatial.github.io/terra/reference/k_means.md)
   clustering of the raster cell locations)

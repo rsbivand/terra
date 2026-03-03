@@ -11,7 +11,7 @@ In order to assure regularity when requesting a regular sample, the number of ce
 
     <a class="navbar-brand me-2" href="../index.html">terra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-91</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-97</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,7 +69,7 @@ In order to assure regularity when requesting a regular sample, the number of ce
 <dd><p>numeric. The sample size. If <code>x</code> is a SpatVector, you can also provide a vector of the same length as <code>x</code> in which case sampling is done separately for each geometry. If <code>x</code> is a SpatRaster, and you are using <code>method="regular"</code> you can specify the size as two numbers (number of rows and columns). Note that when using <code>method="stratified"</code>, the sample size is returned for each stratum</p></dd>
 
   <dt id="arg-method">method<a class="anchor" aria-label="anchor" href="#arg-method"></a></dt>
-<dd><p>character. Should be "regular" or "random", If <code>x</code> is a <code>SpatRaster</code>, it can also be "stratified" (each value in <code>x</code> is a stratum), "weights" (each value in <code>x</code> is a probability weight), or "spread" (an approximately regular sample, using compact zones generated with <code><a href="k_means.html">k_means</a></code> clustering of the raster cell locations)</p></dd>
+<dd><p>character. Should be one of "regular", "random", or, if <code>x</code> is a <code>SpatRaster</code>, "stratified" (each value in <code>x</code> is a stratum), "weights" (each value in <code>x</code> is a probability weight), or "spread" (an approximately regular sample, using compact zones generated with <code><a href="k_means.html">k_means</a></code> clustering of the raster cell locations)</p></dd>
 
   <dt id="arg-replace">replace<a class="anchor" aria-label="anchor" href="#arg-replace"></a></dt>
 <dd><p>logical. If <code>TRUE</code>, sampling is with replacement (if <code>method="random"</code>)</p></dd>
@@ -251,7 +251,7 @@ In order to assure regularity when requesting a regular sample, the number of ce
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Robert J. Hijmans.</p>
+  <p>Developed by Robert J. Hijmans, Andrew Brown, Márcia Barbosa.</p>
 </div>
 
 <div class="pkgdown-footer-right">

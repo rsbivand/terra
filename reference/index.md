@@ -73,6 +73,9 @@
   [`aggregate(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/aggregate.md)
   : Aggregate raster or vector data
 
+- [`agitate(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/agitate.md)
+  : Add noise to (jitter) a SpatVector of points
+
 - [`align(`*`<SpatExtent>`*`,`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/align.md)
   [`align(`*`<SpatExtent>`*`,`*`<numeric>`*`)`](https://rspatial.github.io/terra/reference/align.md)
   : Align a SpatExtent
@@ -84,7 +87,8 @@
   equality
 
 - [`animate(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/animate.md)
-  : Animate a SpatRaster
+  [`animate(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/animate.md)
+  : Animate a map
 
 - [`app(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/app.md)
   [`app(`*`<SpatRasterDataset>`*`)`](https://rspatial.github.io/terra/reference/app.md)
@@ -463,8 +467,11 @@
   [`clearVSIcache()`](https://rspatial.github.io/terra/reference/gdal.md)
   [`libVersion()`](https://rspatial.github.io/terra/reference/gdal.md)
   [`unloadGDALdrivers()`](https://rspatial.github.io/terra/reference/gdal.md)
-  [`proj_ok()`](https://rspatial.github.io/terra/reference/gdal.md) :
-  GDAL version, supported file formats, and cache size
+  [`proj_ok()`](https://rspatial.github.io/terra/reference/gdal.md)
+  [`projNetwork()`](https://rspatial.github.io/terra/reference/gdal.md)
+  [`projPaths()`](https://rspatial.github.io/terra/reference/gdal.md) :
+  GDAL version, supported file formats, cache size, and PROJ coordinate
+  transformation control
 
 - [`geom(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/geometry.md)
   : Get the geometry (coordinates) of a SpatVector
