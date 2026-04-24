@@ -63,7 +63,7 @@
   : add vertical and/or horizontal lines to a map made with terra
 
 - [`add_mtext()`](https://rspatial.github.io/terra/reference/add_mtext.md)
-  : draw a box
+  : add a margin text
 
 - [`adjacent(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/adjacent.md)
   [`adjacent(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/adjacent.md)
@@ -88,6 +88,7 @@
 
 - [`animate(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/animate.md)
   [`animate(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/animate.md)
+  [`animate(`*`<SpatVectorCollection>`*`)`](https://rspatial.github.io/terra/reference/animate.md)
   : Animate a map
 
 - [`app(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/app.md)
@@ -604,6 +605,9 @@
 - [`add_legend()`](https://rspatial.github.io/terra/reference/legend.md)
   : add a custom legend
 
+- [`legend_cont()`](https://rspatial.github.io/terra/reference/legend_cont.md)
+  : Add a continuous legend
+
 - [`linearUnits(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/linearUnits.md)
   [`linearUnits(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/linearUnits.md)
   : Linear units of the coordinate reference system
@@ -771,8 +775,11 @@
 - [`princomp(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/princomp.md)
   : SpatRaster PCA with princomp
 
-- [`project(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/project.md)
-  [`project(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/project.md)
+- [`proj_pipelines()`](https://rspatial.github.io/terra/reference/proj_pipelines.md)
+  : Find CRS transformation pipelines
+
+- [`project(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/project.md)
+  [`project(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/project.md)
   [`project(`*`<SpatExtent>`*`)`](https://rspatial.github.io/terra/reference/project.md)
   [`project(`*`<matrix>`*`)`](https://rspatial.github.io/terra/reference/project.md)
   : Change the coordinate reference system
@@ -1055,12 +1062,22 @@
 - [`terrain(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/terrain.md)
   : terrain characteristics
 
+- [`tessellate(`*`<ANY>`*`)`](https://rspatial.github.io/terra/reference/tessellate.md)
+  : Create a tesselation
+
 - [`text(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/text.md)
   [`text(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/text.md)
   : Add labels to a map
 
+- [`thin(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/thin.md)
+  [`thinNodes(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/thin.md)
+  : Subset geometries by minimum distance
+
 - [`thresh(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/thresh.md)
   : Thresholding
+
+- [`tile_apply()`](https://rspatial.github.io/terra/reference/tile_apply.md)
+  : Apply a function to tiles of a SpatRaster in parallel
 
 - [`has.time(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/time.md)
   [`time(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/time.md)
@@ -1105,7 +1122,7 @@
   : units of SpatRaster or SpatRasterDataSet
 
 - [`update(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/update.md)
-  : Change values in a file
+  : Update a raster file
 
 - [`values(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/values.md)
   [`values(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/values.md)
@@ -1146,6 +1163,9 @@
 
 - [`vrt_tiles()`](https://rspatial.github.io/terra/reference/vrt_tiles.md)
   : filenames of VRT tiles
+
+- [`warp_scale()`](https://rspatial.github.io/terra/reference/warp_scale.md)
+  : Compute warp resampling scale
 
 - [`watershed(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/watershed.md)
   : Catchment delineation

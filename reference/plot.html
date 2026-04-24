@@ -11,7 +11,7 @@ There is a separate help file for plotting a SpatGraticule or SpatExtent."><meta
 
     <a class="navbar-brand me-2" href="../index.html">terra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-97</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.9-22</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,9 +62,9 @@ There is a separate help file for plotting a SpatGraticule or SpatExtent."><meta
 <span></span>
 <span><span class="co"># S4 method for class 'SpatVector,character'</span></span>
 <span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, col<span class="op">=</span><span class="cn">NULL</span>, type<span class="op">=</span><span class="cn">NULL</span>, mar<span class="op">=</span><span class="cn">NULL</span>, legend<span class="op">=</span><span class="cn">TRUE</span>, axes<span class="op">=</span><span class="op">!</span><span class="va">add</span>, plg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, pax<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, </span>
-<span>    main<span class="op">=</span><span class="st">""</span>, grid<span class="op">=</span><span class="cn">FALSE</span>, zebra<span class="op">=</span><span class="cn">FALSE</span>, ext<span class="op">=</span><span class="cn">NULL</span>, sort<span class="op">=</span><span class="cn">TRUE</span>, reverse<span class="op">=</span><span class="cn">FALSE</span>, fun<span class="op">=</span><span class="cn">NULL</span>,</span>
-<span>  colNA<span class="op">=</span><span class="cn">NA</span>, alpha<span class="op">=</span><span class="cn">NULL</span>, <span class="va">nr</span>, <span class="va">nc</span>, add<span class="op">=</span><span class="cn">FALSE</span>, buffer<span class="op">=</span><span class="cn">TRUE</span>, background<span class="op">=</span><span class="cn">NULL</span>, </span>
-<span>  box<span class="op">=</span><span class="va">axes</span>, clip<span class="op">=</span><span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></span>
+<span>    main<span class="op">=</span><span class="st">""</span>, range<span class="op">=</span><span class="cn">NULL</span>, fill_range<span class="op">=</span><span class="cn">FALSE</span>, breaks<span class="op">=</span><span class="cn">NULL</span>, breakby<span class="op">=</span><span class="st">"eqint"</span>, fun<span class="op">=</span><span class="cn">NULL</span>, </span>
+<span>  colNA<span class="op">=</span><span class="cn">NA</span>, alpha<span class="op">=</span><span class="cn">NULL</span>, grid<span class="op">=</span><span class="cn">FALSE</span>, zebra<span class="op">=</span><span class="cn">FALSE</span>, ext<span class="op">=</span><span class="cn">NULL</span>, sort<span class="op">=</span><span class="cn">TRUE</span>, reverse<span class="op">=</span><span class="cn">FALSE</span>, </span>
+<span>  <span class="va">nr</span>, <span class="va">nc</span>, add<span class="op">=</span><span class="cn">FALSE</span>, buffer<span class="op">=</span><span class="cn">TRUE</span>, background<span class="op">=</span><span class="cn">NULL</span>, box<span class="op">=</span><span class="va">axes</span>, clip<span class="op">=</span><span class="cn">TRUE</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for class 'SpatVector,numeric'</span></span>
 <span><span class="fu">plot</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, <span class="va">...</span><span class="op">)</span></span>
@@ -130,8 +130,10 @@ There is a separate help file for plotting a SpatGraticule or SpatExtent."><meta
 <li><p><code>tick</code> One of these partially matched values: "through", "in", "middle", "out", or "none", to choose a tickmark placement/length that is different from the default "throughout".</p></li>
 <li><p><code>tick.length</code> to change the tickmark length (default = 1). Only relevant when <code>tick</code> is "throughout" or "out".</p></li>
 <li><p><code>tick.col</code>, <code>tick.box.col</code> and <code>tick.lwd</code> to change the appearance of the tickmarks</p></li>
+<li><p><code>title</code> add a legend title</p></li>
 <li><p><code>title.srt</code> to rotate the legend title</p></li>
 <li><p><code>title.x</code> and <code>title.y</code> to place the legend title at specific coordinates</p></li>
+<li><p><code>bg</code> background color behind the legend (e.g. <code>"white"</code>) for visibility when drawn on top of a map</p></li>
 </ul></dd>
 
 
@@ -206,7 +208,7 @@ There is a separate help file for plotting a SpatGraticule or SpatExtent."><meta
 <dd><p>logical. If <code>TRUE</code> add the object to the current plot</p></dd>
 
   <dt id="arg-ext">ext<a class="anchor" aria-label="anchor" href="#arg-ext"></a></dt>
-<dd><p>SpatExtent. Can be use instead of xlim and ylim to set the extent of the plot</p></dd>
+<dd><p>SpatExtent or other object for which <code><a href="ext.html">ext</a></code> returns one. Can be use instead of xlim and ylim to set the extent of the plot</p></dd>
 
   <dt id="arg-reset">reset<a class="anchor" aria-label="anchor" href="#arg-reset"></a></dt>
 <dd><p>logical. If <code>TRUE</code> the margins (see argument <code>mar</code>) are reset to what they were before calling plot; doing so may affect the display of additional objects that are added to the map (e.g. with  <code><a href="lines.html">lines</a></code>)</p></dd>
@@ -282,16 +284,16 @@ There is a separate help file for plotting a SpatGraticule or SpatExtent."><meta
 <span class="r-in"><span><span class="co"># multi-layer with RGB</span></span></span>
 <span class="r-in"><span><span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="rast.html">rast</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"ex/logo.tif"</span>, package<span class="op">=</span><span class="st">"terra"</span><span class="op">)</span><span class="op">)</span>   </span></span>
 <span class="r-in"><span><span class="va">s</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> class       : SpatRaster </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> class       : SpatRaster</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> size        : 77, 101, 3  (nrow, ncol, nlyr)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> resolution  : 1, 1  (x, y)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> extent      : 0, 101, 0, 77  (xmin, xmax, ymin, ymax)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> coord. ref. : Cartesian (Meter) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> source      : logo.tif </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> colors RGB  : 1, 2, 3 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> names       : red, green, blue </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> min values  :   0,     0,    0 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> max values  : 255,   255,  255 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> coord. ref. : Cartesian (Meter)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> source      : logo.tif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> colors rgb  : 1, 2, 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> names       : red, green, blue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> min values  :   0,     0,    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> max values  : 255,   255,  255</span>
 <span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">s</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># remove RGB</span></span></span>
 <span class="r-in"><span><span class="fu">plot</span><span class="op">(</span><span class="va">s</span><span class="op">*</span><span class="fl">1</span><span class="op">)</span></span></span>

@@ -26,7 +26,7 @@ a single file.
 # S4 method for class 'character'
 rast(x, subds=0, lyrs=NULL, drivers=NULL, opts=NULL, win=NULL, 
     snap="near", vsi=FALSE, raw=FALSE, noflip=FALSE, 
-    guessCRS=TRUE, domains="", md=FALSE, dims=NULL)
+    guessCRS=TRUE, domains="", md=NULL, dims=NULL)
 
 # S4 method for class 'missing'
 rast(x, nrows=180, ncols=360, nlyrs=1, xmin=-180, xmax=180, ymin=-90,
@@ -123,7 +123,7 @@ rast(x, ...)
 
 - guessCRS:
 
-  logical. If `TRUE` and the the file does not specify a CRS but has an
+  logical. If `TRUE` and the file does not specify a CRS but has an
   extent that is within longitude/latitude bounds, the
   longitude/latitude crs is assigned to the SpatRaster
 
@@ -135,18 +135,21 @@ rast(x, ...)
 
 - md:
 
-  logical. If `TRUE`, the multi-dimensional GDAL interface is used under
-  the hood for file reading. This interface can only be used for a few
-  file formats (netCDF/HDF5) and can sometimes (not always) provide
-  notably faster reading of data with many (time) steps in the third or
-  higher dimension. Support for this is new and experimental (June 2025)
+  logical. If `TRUE`, the multi-dimensional GDAL API is used for reading
+  the file. This API can only be used for a few file formats
+  (netCDF/HDF5) and can sometimes provide notably faster reading of data
+  with many (time) steps in the third or higher dimension. If no
+  subdataset is selected with `subds`, all usable arrays are combined
+  into one `SpatRaster` (like `md=FALSE`); a warning reports how many
+  variables and layers were combined when there is more than one
+  variable.
 
 - dims:
 
-  numeric. Specify the order of the dimensions to read atypical files.
-  See
+  numeric. Specify the order of the dimensions to read atypical
+  multidimensional files. See
   [`ar_info`](https://rspatial.github.io/terra/reference/ar_info.md).
-  Only relevant if `md=TRUE`. Not used yet
+  Not implemented yet
 
 - nrows:
 
@@ -310,11 +313,11 @@ s <- rast(system.file("ex/logo.tif", package="terra"))
 
 # Create a skeleton with no associated cell values
 rast(s)
-#> class       : SpatRaster 
+#> class       : SpatRaster
 #> size        : 77, 101, 3  (nrow, ncol, nlyr)
 #> resolution  : 1, 1  (x, y)
 #> extent      : 0, 101, 0, 77  (xmin, xmax, ymin, ymax)
-#> coord. ref. : Cartesian (Meter) 
+#> coord. ref. : Cartesian (Meter)
 
 # from a matrix 
 m <- matrix(1:25, nrow=5, ncol=5)
@@ -331,13 +334,13 @@ head(d)
 #> 5 4.5 4.5    21
 #> 6 0.5 3.5     2
 rast(d, type="xyz")
-#> class       : SpatRaster 
+#> class       : SpatRaster
 #> size        : 5, 5, 1  (nrow, ncol, nlyr)
 #> resolution  : 1, 1  (x, y)
 #> extent      : 0, 5, 0, 5  (xmin, xmax, ymin, ymax)
-#> coord. ref. :  
+#> coord. ref. : 
 #> source(s)   : memory
-#> name        : lyr.1 
-#> min value   :     1 
-#> max value   :    25 
+#> name        : lyr.1
+#> min value   :     1
+#> max value   :    25
 ```
