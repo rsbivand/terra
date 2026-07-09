@@ -64,8 +64,8 @@ rast(x, ...)
 
   filename (character), missing, SpatRaster, SpatRasterDataset,
   SpatExtent, SpatVector, matrix, array, list of SpatRasters. For other
-  types it will be attempted to create a SpatRaster via (\`as(x,
-  "SpatRaster")\`
+  types it will be attempted to create a SpatRaster via
+  `as(x, "SpatRaster")`
 
 - subds:
 
@@ -101,7 +101,7 @@ rast(x, ...)
 
 - vsi:
 
-  logical. If `TRUE`, "\vsicurl\\ is prepended to filenames that start
+  logical. If `TRUE`, "/vsicurl/" is prepended to filenames that start
   with "http". There are many [VSI configuration
   options](https://gdal.org/en/stable/user/virtual_file_systems.html)
   that can be set with
@@ -131,7 +131,7 @@ rast(x, ...)
 
   character. Metadata domains to read (see
   [`metags`](https://rspatial.github.io/terra/reference/metags.md) to
-  retrieve their values if there are any. "" is the default domain
+  retrieve their values if there are any). `""` is the default domain
 
 - md:
 
@@ -254,7 +254,7 @@ rast(x, ...)
 
 - warn:
 
-  logical. If `TRUE`, a warnings about empty rasters may be emitted
+  logical. If `TRUE`, a warning about empty rasters may be emitted
 
 - ...:
 
@@ -280,7 +280,7 @@ session either or directly passed to nodes on a computer cluster.
 Generally, you should use
 [`writeRaster`](https://rspatial.github.io/terra/reference/writeRaster.md)
 to save SpatRaster objects to disk (and pass a filename or cell values
-of cluster nodes). Also see
+to cluster nodes). Also see
 [`wrap`](https://rspatial.github.io/terra/reference/wrap.md).
 
 ## See also

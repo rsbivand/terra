@@ -102,7 +102,7 @@
   layers
 
 - [`ar_info()`](https://rspatial.github.io/terra/reference/ar_info.md) :
-  ar_info
+  Describe a multi-dimensional array file
 
 - [`Arith-methods`](https://rspatial.github.io/terra/reference/arith-generic.md)
   [`Arith,SpatExtent,numeric-method`](https://rspatial.github.io/terra/reference/arith-generic.md)
@@ -458,6 +458,9 @@
 - [`freq(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/freq.md)
   : Frequency table
 
+- [`furdist(`*`<SpatVector>`*`,`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/furdist.md)
+  : Distance to the furthest location on a geometry
+
 - [`gaps(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/gaps.md)
   : Find gaps between polygons
 
@@ -576,7 +579,7 @@
   : Check if a SpatExtent or SpatVector is empty
 
 - [`is.flipped(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/is.flipped.md)
-  : Is a SpatRaster is flipped
+  : Is a SpatRaster flipped?
 
 - [`is.lonlat(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/is.lonlat.md)
   [`is.lonlat(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/is.lonlat.md)
@@ -622,6 +625,9 @@
   [`lines(`*`<SpatExtent>`*`)`](https://rspatial.github.io/terra/reference/lines.md)
   [`polys(`*`<SpatExtent>`*`)`](https://rspatial.github.io/terra/reference/lines.md)
   : Add points, lines, or polygons to a map
+
+- [`make.RGB()`](https://rspatial.github.io/terra/reference/make.RGB.md)
+  : Create a RGB SpatRaster
 
 - [`makeTiles(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/makeTiles.md)
   [`getTileExtents(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/makeTiles.md)
@@ -704,6 +710,19 @@
   [`nearest(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/nearby.md)
   : nearby geometries
 
+- [`netw(`*`<missing>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`netw(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`netw(`*`<igraph>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`netw(`*`<character>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`netw(`*`<SpatNetwork>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`net_nodes(`*`<SpatNetwork>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`net_edges(`*`<SpatNetwork>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`net_nnodes(`*`<SpatNetwork>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`net_nedges(`*`<SpatNetwork>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`net_directed(`*`<SpatNetwork>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  [`net_weights(`*`<SpatNetwork>`*`)`](https://rspatial.github.io/terra/reference/netw.md)
+  : Build a SpatNetwork
+
 - [`normalize.longitude(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/normalize.longitude.md)
   : normalize vector data that crosses the dateline
 
@@ -741,6 +760,7 @@
 - [`plet(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/plet.md)
   [`plet(`*`<SpatRasterCollection>`*`)`](https://rspatial.github.io/terra/reference/plet.md)
   [`plet(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/plet.md)
+  [`plet(`*`<data.frame>`*`)`](https://rspatial.github.io/terra/reference/plet.md)
   [`plet(`*`<SpatVectorCollection>`*`)`](https://rspatial.github.io/terra/reference/plet.md)
   [`lines(`*`<leaflet>`*`)`](https://rspatial.github.io/terra/reference/plet.md)
   [`points(`*`<leaflet>`*`)`](https://rspatial.github.io/terra/reference/plet.md)
@@ -838,6 +858,7 @@
 
 - [`regress(`*`<SpatRaster>`*`,`*`<numeric>`*`)`](https://rspatial.github.io/terra/reference/regress.md)
   [`regress(`*`<SpatRaster>`*`,`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/regress.md)
+  [`regress(`*`<SpatRaster>`*`,`*`<data.frame>`*`)`](https://rspatial.github.io/terra/reference/regress.md)
   : Cell level regression
 
 - [`relate(`*`<SpatVector>`*`,`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/relate.md)
@@ -960,11 +981,17 @@
   [`shift(`*`<SpatExtent>`*`)`](https://rspatial.github.io/terra/reference/shift.md)
   : Shift
 
+- [`shortestPath(`*`<SpatNetwork>`*`)`](https://rspatial.github.io/terra/reference/shortestPath.md)
+  : Shortest paths on a SpatNetwork
+
 - [`sieve(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/sieve.md)
   : Sieve filter
 
 - [`simplifyGeom(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/simplify.md)
   : simplifyGeom geometries
+
+- [`snapTo(`*`<SpatVector>`*`,`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/snapTo.md)
+  : Snap points to the edge of lines or polygons
 
 - [`sort(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/sort.md)
   [`sort(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/sort.md)
@@ -1063,7 +1090,7 @@
   : terrain characteristics
 
 - [`tessellate(`*`<ANY>`*`)`](https://rspatial.github.io/terra/reference/tessellate.md)
-  : Create a tesselation
+  : Create a tessellation
 
 - [`text(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/text.md)
   [`text(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/text.md)
@@ -1077,7 +1104,7 @@
   : Thresholding
 
 - [`tile_apply()`](https://rspatial.github.io/terra/reference/tile_apply.md)
-  : Apply a function to tiles of a SpatRaster in parallel
+  : Parallelize a SpatRaster function
 
 - [`has.time(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/time.md)
   [`time(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/time.md)
@@ -1119,7 +1146,7 @@
   [`` `units<-`( ``*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/units.md)
   [`units(`*`<SpatRasterDataset>`*`)`](https://rspatial.github.io/terra/reference/units.md)
   [`` `units<-`( ``*`<SpatRasterDataset>`*`)`](https://rspatial.github.io/terra/reference/units.md)
-  : units of SpatRaster or SpatRasterDataSet
+  : units of SpatRaster or SpatRasterDataset
 
 - [`update(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/update.md)
   : Update a raster file
@@ -1202,6 +1229,9 @@
 - [`writeCDF(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/writeCDF.md)
   [`writeCDF(`*`<SpatRasterDataset>`*`)`](https://rspatial.github.io/terra/reference/writeCDF.md)
   : Write raster data to a NetCDF file
+
+- [`writeNetwork(`*`<SpatNetwork>`*`,`*`<character>`*`)`](https://rspatial.github.io/terra/reference/writeNetwork.md)
+  : Write a SpatNetwork to disk
 
 - [`writeRaster(`*`<SpatRaster>`*`,`*`<character>`*`)`](https://rspatial.github.io/terra/reference/writeRaster.md)
   : Write raster data to a file
