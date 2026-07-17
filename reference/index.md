@@ -6,7 +6,7 @@
   [`` `NAflag<-`( ``*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/NAflag.md)
   : Set the NA flag
 
-- [`NIDP(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/NIPD.md)
+- [`NIDP(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/NIDP.md)
   : Number of immediate adjacent cells flowing into each cell
 
 - [`RGB(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/RGB.md)
@@ -119,6 +119,9 @@
   [`Arith,SpatRaster,matrix-method`](https://rspatial.github.io/terra/reference/arith-generic.md)
   [`Arith,matrix,SpatRaster-method`](https://rspatial.github.io/terra/reference/arith-generic.md)
   : Arithmetic
+
+- [`arrows_on_rast()`](https://rspatial.github.io/terra/reference/arrows_on_rast.md)
+  : Visualize Directional Arrows on a SpatRaster
 
 - [`as.character(`*`<SpatExtent>`*`)`](https://rspatial.github.io/terra/reference/as.character.md)
   [`as.character(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/as.character.md)
@@ -430,6 +433,9 @@
 
 - [`flowAccumulation(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/flowAccumulation.md)
   : Flow accumulation
+
+- [`flowDir(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/flowDir.md)
+  : Path-Based Nondisperive Flow Direction
 
 - [`focal(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/focal.md)
   : Focal values
@@ -754,8 +760,11 @@
 - [`persp(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/persp.md)
   : Perspective plot
 
+- [`pitfiller(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/pitfiller.md)
+  : Pit Filler
+
 - [`pitfinder(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/pitfinder.md)
-  : Pit Finder in a Flow Dir SpatRaster for Watershed Extraction
+  : Find pits (depressions with no outlet)
 
 - [`plet(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/plet.md)
   [`plet(`*`<SpatRasterCollection>`*`)`](https://rspatial.github.io/terra/reference/plet.md)
