@@ -1,9 +1,9 @@
-# Extract values from a SpatRaster
+# Extract values from a SpatRaster or polygon SpatVector
 
-Extract values from a SpatRaster for a set of locations. The locations
-can be a SpatVector (points, lines, polygons), a data.frame or matrix
-with (x, y) or (longitude, latitude – in that order!) coordinates, or a
-vector with cell numbers.
+Extract values from a SpatRaster or a polygon SpatVector for a set of
+locations. The locations can be a SpatVector (points, lines, polygons),
+a data.frame or matrix with (x, y) or (longitude, latitude – in that
+order!) coordinates, or a vector with cell numbers.
 
 When argument `y` is a `SpatVector` the first column has the ID (record
 number) of the `SpatVector` used (unless you set `ID=FALSE`).
@@ -51,13 +51,12 @@ extract(x, y, count=FALSE)
 
   function to summarize the extracted data by line or polygon geometry,
   such as `sum`, as well as terra built-in functions `"isNA"`, and
-  `"notNA"` to get the count of cells that are (not) `NA`, and `"sum2"`
+  `"notNA"` to get the count of cells that are not `NA`, and `"sum2"`
   (the sum of squares). You can use `fun=table` to tabulate raster
   values for each line or polygon geometry. If `weights=TRUE` or
   `exact=TRUE` only `mean`, `sum`, `min`, `max` and `table` are accepted
   — and these functions consider the fraction of a cell that is covered
-  when computing the mean or the sum). Ignored if `y` has point
-  geometry.
+  when computing the mean or the sum. Ignored if `y` has point geometry.
 
 - method:
 
@@ -130,14 +129,14 @@ extract(x, y, count=FALSE)
 
   positive number. A search-radius that is used when `y` has point
   geometry. If this value is larger than zero, it is the maximum
-  distance used to find the a cell with a value that is nearest to the
-  cell that the point falls in if that cell that has a missing (`NA`)
-  value. The value of this nearest cell, the distance to the original
-  cell, and the new cell number are returned. The radius should be
-  expressed in m if the data have lon/lat coordinates or in the distance
-  unit of the crs in other cases (typically also m). For lon/lat data,
-  the mean latitude of the points is used to compute the distances, so
-  this may be imprecise for data with a large latitudinal range
+  distance used to find a cell with a value that is nearest to the cell
+  that the point falls in if that cell that has a missing (`NA`) value.
+  The value of this nearest cell, the distance to the original cell, and
+  the new cell number are returned. The radius should be expressed in m
+  if the data have lon/lat coordinates or in the distance unit of the
+  crs in other cases (typically also m). For lon/lat data, the mean
+  latitude of the points is used to compute the distances, so this may
+  be imprecise for data with a large latitudinal range
 
 - wide:
 
